@@ -1,0 +1,209 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'San Francisco', 'Noto Sans KR', sans-serif;
+}
+body{
+    width: 100vw;
+    overflow-x: hidden;
+}
+.wrap{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+.wrap > div{
+    display: flex;
+    justify-content: center;
+}
+
+.wrap > div > .container{
+    width: 1300px;
+    display: flex;
+}
+
+.wrap > .main > .container{
+    flex-direction: column;
+}
+
+.wrap > .top {
+    padding-top: 20px;
+    background: #f3f4f7;
+    min-height: 300px;
+}
+
+.wrap > .top > .container > .left{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: -30px;
+}
+
+.wrap > .top > .container > .left img{
+    border-radius: 40px;
+    width: 60%;
+    height: auto;
+}
+
+.wrap > .top > .container > .right{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    padding: 10px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.wrap > .top > .container > .right > .title{
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #606060;
+}
+
+.wrap > .top > .container > .right > .name-box{
+    display: flex;
+    margin-top: 40px;
+    align-items: baseline;
+}
+
+.wrap > .top > .container > .right > .name-box > .full-name{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.wrap > .top > .container > .right > .name-box > .link-btns{
+    margin-left: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.wrap > .top > .container > .right > .name-box > .link-btns a {
+    color: #a5a5a5;
+    margin-right: 3px;
+}
+.wrap > .top > .container > .right > .name-box > .link-btns a:hover {
+    color: #0059ff;
+}
+
+.wrap > .top > .container > .right > .contact{
+    font-size: .8rem;
+    color: #0059ff;
+    margin-top: 10px;
+}
+
+.wrap > .top > .container > .right > .contact i {
+    margin-right: 2px;
+}
+
+.wrap > .top > .container > .right > .contact span {
+    margin-right: 10px;
+}
+
+.wrap > .main > .container > .group{
+    padding: 80px 0 40px 0;
+    width: 100%;
+}
+
+.wrap > .main > .container > .group .title{
+    font-size: 2.2rem;
+    font-weight: 500;
+}
+
+.wrap > .main > .container > .group .cont-box {
+    display: flex;
+    justify-content: end;
+}
+
+.wrap > .main > .container > .group > .cont-box .cont {
+    width: 80%;
+}
+
+.wrap > .main > .container > .group > .cont-box .cont .list{
+    border-top: 1px solid #cfcfcf;
+    border-bottom: 1px solid #cfcfcf;
+}
+
+.wrap > .main > .container > .group > .cont-box .cont .list > li{
+    padding: 30px 40px;
+    display: flex;
+}
+
+.wrap > .main > .container > .group > .cont-box .cont .list > li:not(:last-of-type){
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.wrap > .main > .container > .group > .cont-box .cont .list > li .icon{
+    margin-right: 50px;
+}
+
+
+.wrap > .main > .container > .group > .cont-box .cont .list > li .icon img{
+    width: 90px;
+}
+
+.wrap > .main > .container > .group > .cont-box .cont .list > li .name{
+    font-size: 1rem;
+    font-weight: bold;
+    margin-right: 50px;
+    display: flex;
+    align-items: baseline;
+    width: 130px;
+}
+
+.wrap > .main > .container > .group > .cont-box .cont .list > li .cont {
+    line-height: 1.4rem;
+    font-size: .9rem;
+    font-weight: 500;
+}
+
+.wrap > .main > .container > .group > .cont-box .cont .list > li .cont .skills {
+    margin-top: 5px;
+}
+
+.wrap > .main > .container > .group > .cont-box .cont .list > li .cont .skills ul{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 0;
+    list-style-type: none;
+}
+
+.wrap > .main > .container > .group > .cont-box .cont .list > li .cont .skills ul li{
+    margin-right: 10px;
+    background: #6690ff;
+    border-radius: 8px;
+    padding: 0 6px;
+    font-weight: bold;
+    color: #fff;
+    font-size: .8rem;
+    margin-bottom: 5px;
+}
+
+.wrap > .main > .container > .group.indv-project > .cont-box > .cont > .list > li{
+    display: flex;
+    flex-direction: column;
+}
+
+.wrap > .main > .container > .group.indv-project .info > .title img.name{
+    width: 100px;
+}
+
+.wrap > .main > .container > .group.indv-project .info > .sub-title {
+    color: #9b9b9b;
+    font-size: .9rem;
+    margin-top: 15px;
+}
+
+.wrap > .main > .container > .group.indv-project .cont{
+    display: flex;
+    flex-direction: column;
+}
+
+.star{
+    color: #8cc3f0;
+    margin-left: 5px;
+    font-size: .8rem;
+}
