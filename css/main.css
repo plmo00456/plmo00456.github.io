@@ -159,11 +159,11 @@ body{
     font-weight: 500;
 }
 
-.wrap > .main > .container > .group > .cont-box .cont .list > li .cont .skills {
+.wrap > .main > .container > .group > .cont-box .cont .skills {
     margin-top: 5px;
 }
 
-.wrap > .main > .container > .group > .cont-box .cont .list > li .cont .skills ul{
+.wrap > .main > .container > .group > .cont-box .cont .skills ul{
     display: flex;
     flex-wrap: wrap;
     max-width: 100%;
@@ -171,7 +171,7 @@ body{
     list-style-type: none;
 }
 
-.wrap > .main > .container > .group > .cont-box .cont .list > li .cont .skills ul li{
+.wrap > .main > .container > .group > .cont-box .cont .skills ul li{
     margin-right: 10px;
     background: #6690ff;
     border-radius: 8px;
@@ -180,6 +180,24 @@ body{
     color: #fff;
     font-size: .8rem;
     margin-bottom: 5px;
+    line-height: 1.4rem;
+}
+
+.wrap > .main > .container > .group.indv-project > .cont-box > .left{
+    width: 40%;
+    border-top: 1px solid #cfcfcf;
+    border-bottom: 1px solid #cfcfcf;
+}
+
+.wrap > .main > .container > .group.indv-project > .cont-box > .right{
+    width: 40%;
+    border-top: 1px solid #cfcfcf;
+    border-bottom: 1px solid #cfcfcf;
+}
+
+.wrap > .main > .container > .group.indv-project > .cont-box .cont .list{
+    border-top: none;
+    border-bottom: none;
 }
 
 .wrap > .main > .container > .group.indv-project > .cont-box > .cont > .list > li{
