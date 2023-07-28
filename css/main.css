@@ -107,7 +107,7 @@ body{
     width: 100%;
 }
 
-.wrap > .main > .container > .group .title{
+.wrap > .main > .container > .group > .title{
     font-size: 2.2rem;
     font-weight: 500;
 }
@@ -119,6 +119,33 @@ body{
 
 .wrap > .main > .container > .group > .cont-box .cont {
     width: 80%;
+}
+
+.wrap > .main > .container > .group > .cont-box .cont .text {
+    line-height: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.wrap > .main > .container > .group > .cont-box .cont .text .summary {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.wrap > .main > .container > .group > .cont-box .cont .text ul{
+    margin-top: 10px;
+}
+
+.wrap > .main > .container > .group > .cont-box .cont .text ul .add{
+    color: #1a7700;
+}
+
+.wrap > .main > .container > .group > .cont-box .cont .text ul .remove {
+    color: #898989;
+}
+
+.wrap > .main > .container > .group > .cont-box .cont .text .t-bold {
+    font-weight: bold;
 }
 
 .wrap > .main > .container > .group > .cont-box .cont .list{
@@ -181,47 +208,488 @@ body{
     font-size: .8rem;
     margin-bottom: 5px;
     line-height: 1.4rem;
+    position: relative;
 }
 
-.wrap > .main > .container > .group.indv-project > .cont-box > .left{
-    width: 40%;
+.wrap > .main > .container > .group > .cont-box .cont .skills ul li.lib{
+background: #8c8c8c;
+}
+
+.wrap > .main > .container > .group > .cont-box .cont .skills ul li.not-use{
+
+}
+
+.wrap > .main > .container > .group > .cont-box .cont .skills ul li.not-use::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 96%;
+    height: 2px;
+    background-color: #0000007a;
+    transform: translateX(-50%);
+}
+
+.wrap > .main > .container > .group.indv-project .cont-box{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
     border-top: 1px solid #cfcfcf;
     border-bottom: 1px solid #cfcfcf;
+    margin-top: 10px;
+    padding-top: 30px;
 }
 
-.wrap > .main > .container > .group.indv-project > .cont-box > .right{
-    width: 40%;
-    border-top: 1px solid #cfcfcf;
-    border-bottom: 1px solid #cfcfcf;
+.wrap > .main > .container > .group.indv-project .cont-box .row{
+    display: flex;
 }
 
-.wrap > .main > .container > .group.indv-project > .cont-box .cont .list{
+.wrap > .main > .container > .group.indv-project .cont-box .left{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.wrap > .main > .container > .group.indv-project .cont-box .right{
+    width: 50%;
+    align-items: center;
+    display: flex;
+}
+
+.wrap > .main > .container > .group.indv-project .cont-box .cont .list{
     border-top: none;
     border-bottom: none;
 }
 
-.wrap > .main > .container > .group.indv-project > .cont-box > .cont > .list > li{
+.wrap > .main > .container > .group.indv-project .cont-box .cont .list > li{
     display: flex;
     flex-direction: column;
 }
 
-.wrap > .main > .container > .group.indv-project .info > .title img.name{
+.wrap > .main > .container > .group.indv-project .title{
+    display: flex;
+    align-items: center;
+}
+
+.wrap > .main > .container > .group.indv-project .title img.name{
     width: 100px;
 }
 
-.wrap > .main > .container > .group.indv-project .info > .sub-title {
+.wrap > .main > .container > .group.indv-project .title .link{
+    font-size: 1.1rem;
+    margin-left: 15px;
+}
+
+.wrap > .main > .container > .group.indv-project .title .link:hover{
+    color: #8601ff;
+}
+
+.wrap > .main > .container > .group.indv-project .sub-title {
     color: #9b9b9b;
     font-size: .9rem;
     margin-top: 15px;
 }
+
+.wrap > .main > .container > .group.indv-project .info .images {
+    overflow: hidden;
+    width: 100%;
+    height: 400px;
+    outline: 1px solid #b3b3b3;
+    position: relative;
+    margin-top: 20px;
+}
+
 
 .wrap > .main > .container > .group.indv-project .cont{
     display: flex;
     flex-direction: column;
 }
 
+.bottom{
+    margin-top: 130px;
+    height: 100px;
+}
+
 .star{
     color: #8cc3f0;
     margin-left: 5px;
     font-size: .8rem;
+}
+
+.swiper-button-next {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    color: white;
+    z-index: 100;
+    height: 100%;
+}
+.swiper-button-prev {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: white;
+    z-index: 100;
+}
+
+.images .swiper-slide {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.images .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.modal {
+    transition: opacity 0.5s, visibility 0.5s;
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+    position: fixed;
+    z-index: 999;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+}
+
+.modal.open {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    padding: 10px;
+    background: #fff;
+    border-radius: 10px;
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 90%;
+    transform: translateY(-10%);
+    opacity: 0;
+    transition: transform 0.5s, opacity 0.5s;
+    cursor: auto;
+}
+
+.modal.open .modal-content {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.timeline{
+    position: relative;
+    width: 900px;
+    border-top: 2px solid dimgrey;
+}
+
+.timeline .date{
+    display: flex;
+}
+
+.timeline-date ul{
+    display: flex;
+    font-size: 1.2rem;
+    justify-content: space-around;
+}
+
+.timeline-date ul li{
+    margin-top: 5px;
+    position: relative;
+}
+
+.timeline-date ul li .dt{
+    padding: 0 10px;
+}
+
+.timeline-date ul li .r-line{
+    position: absolute;
+    left: 60px;
+    color: #d2d2d2;
+}
+
+.timeline-wrap{
+    width: 900px;
+    height: 100px;
+    margin-top: 160px;
+    margin-bottom: -140px;
+    font-size: 1rem;
+}
+
+/*1------------------------------*/
+
+.timeline .date#one .title{
+    position: absolute;
+    left: 100px;
+    top: -30px;
+    height: 70px;
+    margin-left: 5px;
+    border-left: 1px solid #d0d0d0;
+    display: flex;
+    align-items: baseline;
+    font-weight: bold;
+    color: #00c7ff;
+}
+.timeline .date#one .title img{
+    width: 18px;
+    margin: 0 5px;
+}
+.timeline .date#one .back{
+    width: 216px;
+    height: 40px;
+    background: #00cfff33;
+    position: absolute;
+    bottom: 0;
+    left: 105px;
+}
+
+.timeline .date#one{
+    position: absolute;
+    top: -72px;
+    left: -85px;
+}
+
+.timeline .date#one .node{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.timeline .date#one .date_st{
+    width: 210px;
+}
+
+.timeline .date#one .date_ed{
+    width: 220px;
+}
+
+.timeline .date#one .node .val{
+    margin-bottom: 15px;
+    height: 1rem;
+}
+
+.timeline .date#one .node .v-line{
+    width: 2px;
+    height: 40px;
+    background: dimgrey;
+}
+
+.timeline .date#one. circle{
+    width: 20px;
+    height: 20px;
+    background: #8601ff;
+    border-radius: 10px;
+}
+
+/*2-------------------------------------------------*/
+
+.timeline .date#two .title{
+    position: absolute;
+    left: 100px;
+    top: -30px;
+    height: 70px;
+    margin-left: 5px;
+    border-left: 1px solid #d0d0d0;
+    display: flex;
+    align-items: baseline;
+    font-weight: bold;
+    color: #3a7a39;
+}
+.timeline .date#two .title img{
+    width: 18px;
+    margin: 0 5px;
+}
+
+.timeline .date#two .back{
+    width: 296px;
+    height: 40px;
+    background: #1a770069;
+    position: absolute;
+    bottom: 0;
+    left: 105px;
+}
+
+.timeline .date#two{
+    position: absolute;
+    top: -72px;
+    left: 135px;
+}
+
+.timeline .date#two .node{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.timeline .date#two .date_st{
+    width: 210px;
+}
+
+.timeline .date#two .date_ed{
+    width: 380px;
+}
+
+.timeline .date#two .node .val{
+    margin-bottom: 15px;
+    height: 1rem;
+}
+
+.timeline .date#two .node .v-line{
+    width: 2px;
+    height: 40px;
+    background: dimgrey;
+}
+
+/*3---------------------------------------*/
+.timeline .date#three .title{
+    position: absolute;
+    left: 100px;
+    top: -45px;
+    height: 110px;
+    margin-left: 5px;
+    border-left: 1px solid #d0d0d0;
+    display: flex;
+    align-items: baseline;
+    font-weight: bold;
+    color: #3aac0d;
+}
+
+.timeline .date#three .title img{
+    width: 18px;
+    margin: 0 5px;
+}
+
+.timeline .date#three .back{
+    width: 240px;
+    height: 60px;
+    background: #48ff0033;
+    position: absolute;
+    bottom: 0;
+    left: 105px;
+}
+
+.timeline .date#three{
+    position: absolute;
+    top: -92px;
+    left: 200px;
+}
+
+.timeline .date#three .node{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.timeline .date#three .date_st{
+    width: 210px;
+}
+
+.timeline .date#three .date_ed{
+    width: 270px;
+}
+
+.timeline .date#three .node .val{
+    margin-bottom: 15px;
+    height: 1rem;
+}
+
+.timeline .date#three .node .v-line{
+    width: 2px;
+    height: 60px;
+    background: dimgrey;
+}
+
+/*4---------------------------------------*/
+.timeline .date#four .title{
+    position: absolute;
+    left: 100px;
+    top: 0;
+    height: 70px;
+    margin-left: 5px;
+    border-left: 1px solid #d0d0d0;
+    display: flex;
+    align-items: baseline;
+    font-weight: bold;
+    color: #d95d5d;
+}
+.timeline .date#four .title img{
+    width: 18px;
+    margin: 0 5px;
+}
+
+.timeline .date#four .title img{
+    width: 20px;
+    margin-right: 5px;
+}
+
+.timeline .date#four .back{
+    width: 296px;
+    height: 40px;
+    background: #ff000033;
+    position: absolute;
+    bottom: 0;
+    left: 105px;
+}
+
+.timeline .date#four{
+    position: absolute;
+    top: -72px;
+    left: 455px;
+}
+
+.timeline .date#four .node{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.timeline .date#four .date_st{
+    width: 210px;
+}
+
+.timeline .date#four .date_ed{
+    width: 380px;
+}
+
+.timeline .date#four .node .val{
+    margin-bottom: 15px;
+    height: 1rem;
+}
+
+.timeline .date#four .node .v-line{
+    width: 2px;
+    height: 40px;
+    background: dimgrey;
 }
