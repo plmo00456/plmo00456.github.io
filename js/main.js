@@ -36,21 +36,26 @@ window.onload = function(){
     const tier = document.querySelector("#tier");
     const solved = document.querySelector("#solved");
     const cls = document.querySelector("#class");
+
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function() {
         if (xhr.readyState === xhr.DONE) {
             if (xhr.status === 200 || xhr.status === 201) {
-                var data = xhr.responseText;
+                var data = JSON.parse(xhr.response);
                 tierImg.src = "https://d2gd6pc034wcta.cloudfront.net/tier/" + data.tier + ".svg";
-                tier.innerHTML = tier(data.tier);
+                tier.innerHTML = tierStr(data.tier);
                 solved.innerHTML = numberWithCommas(data.solvedCount);
                 cls.innerHTML = numberWithCommas(data.class);
+
+                if(isChromeBasedBrowser()) {
+                    makeCnavas();
+                }
             } else {
                 console.error(xhr.responseText);
             }
         }
     };
-    xhr.open('GET', '//solved.ac/api/v3/user/show?handle=plmo00456');
+    xhr.open('GET', 'https://corsproxy.io/?https%3A%2F%2Fsolved.ac%2Fapi%2Fv3%2Fuser%2Fshow%3Fhandle%3Dplmo00456');
     xhr.send();
 
 }
@@ -58,9 +63,14 @@ window.onload = function(){
 const pdfMake = () => {
     if(!confirm('PDF를 생성하시겠습니까?')) return;
     showLoadingOverlay();
+    const tBoldEle = document.querySelectorAll(".t-bold");
+    tBoldEle.forEach((e) => {
+        e.classList.remove("t-bold");
+        e.classList.add("t-bold-tmp");
+    });
 
     html2canvas($('body')[0]).then(function(canvas) {
-        let imgData = canvas.toDataURL('image/png');
+        let imgData = canvas.toDataURL('image/jpeg', 1);
 
         let imgWidth = 210; // 이미지 가로 길이(mm) A4 기준
         let pageHeight = imgWidth * 1.414;  // 출력 페이지 세로 길이 계산 A4 기준
@@ -71,14 +81,14 @@ const pdfMake = () => {
         let position = 0;
 
         // 첫 페이지 출력
-        doc.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
+        doc.addImage(imgData, 'JPEG', 0, position, imgWidth, imgHeight);
         heightLeft -= pageHeight;
 
         // 한 페이지 이상일 경우 루프 돌면서 출력
         while (heightLeft >= 20) {
             position = heightLeft - imgHeight;
             doc.addPage();
-            doc.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
+            doc.addImage(imgData, 'JPEG', 0, position, imgWidth, imgHeight);
             heightLeft -= pageHeight;
         }
 
@@ -94,24 +104,53 @@ const pdfMake = () => {
         // 파일 저장
         doc.save("박우진_"+dateString+'.pdf');
 
+        tBoldEle.forEach((e) => {
+            e.classList.add("t-bold");
+            e.classList.remove("t-bold-tmp");
+        });
         // 로딩 화면 숨기기
         hideLoadingOverlay();
     });
 }
+document.addEventListener("DOMContentLoaded", function () {
+    window.addEventListener("scroll", function () {
+        for (var i = 1; i <= document.querySelectorAll(".group").length; i++) {
+            var menuItem = document.querySelector("#menu" + i);
+            var button = document.querySelector("#menu" + i + "Btn");
+            var rect = menuItem.getBoundingClientRect();
+            if (rect.top < window.innerHeight / 2 && rect.bottom > window.innerHeight / 2) {
+                button.classList.add("selected");
+            } else {
+                button.classList.remove("selected");
+            }
+        }
+    });
+});
 
 
 function scrollToElem(elemId) {
     var target = document.getElementById(elemId);
-    target.scrollIntoView({behavior: "smooth"});
+    var offset = 200; // 위로 조정할 픽셀 수 설정
+
+    var topPos = target.offsetTop - offset;
+
+    window.scrollTo({
+        top: topPos,
+        behavior: "smooth"
+    });
 }
 
 function numberWithCommas(x) {
-    var parts = x.toString().split(".");
-    parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-    return parts.join(".");
+    try {
+        var parts = x.toString().split(".");
+        parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        return parts.join(".");
+    }catch(e){
+        return x;
+    }
 }
 
-function tier(x){
+function tierStr(x){
     switch(x){
         case 1:
             return "브론즈5";
@@ -186,4 +225,34 @@ function showLoadingOverlay() {
 function hideLoadingOverlay() {
     document.getElementById("loading-overlay").classList.add("hidden");
     document.body.style.overflow = ""; // 스크롤 허용
+}
+
+function makeCnavas(){
+    var xhr = new XMLHttpRequest();
+    var svgUrl = document.querySelector("#al-tier");
+    xhr.open("GET", 'https://corsproxy.io/?' + svgUrl.src);
+    xhr.responseType = "blob";
+    xhr.onload = response;
+    xhr.send();
+
+    function response(e) {
+        var urlCreator = window.URL || window.webkitURL;
+        var imageUrl = urlCreator.createObjectURL(this.response);
+        svgUrl.src = imageUrl;
+        var img = new Image();
+        img.src = imageUrl;
+        img.onload = function() {
+            var canvas = document.createElement('canvas');
+            var ctx = canvas.getContext('2d');
+            canvas.id = "canvas";
+            ctx.drawImage(img, 0, 0);
+            svgUrl.after(canvas);
+            svgUrl.remove();
+        };
+    }
+}
+
+function isChromeBasedBrowser() {
+    const userAgent = window.navigator.userAgent.toLowerCase();
+    return userAgent.includes('chrome') || userAgent.includes('chromium');
 }

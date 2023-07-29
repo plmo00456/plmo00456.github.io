@@ -1,3 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+/**
+ * http://applemusic.tumblr.com/
+ * https://jsfiddle.net/xq56dmrh/
+ */
+
+/** Ultra Light */
+@font-face {
+    font-family: "San Francisco";
+    font-weight: 100;
+    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-ultralight-webfont.woff");
+}
+
+/** Thin */
+@font-face {
+    font-family: "San Francisco";
+    font-weight: 200;
+    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-thin-webfont.woff");
+}
+
+/** Regular */
+@font-face {
+    font-family: "San Francisco";
+    font-weight: 400;
+    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
+}
+
+/** Medium */
+@font-face {
+    font-family: "San Francisco";
+    font-weight: 500;
+    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-medium-webfont.woff");
+}
+
+/** Semi Bold */
+@font-face {
+    font-family: "San Francisco";
+    font-weight: 600;
+    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-semibold-webfont.woff");
+}
+
+/** Bold */
+@font-face {
+    font-family: "San Francisco";
+    font-weight: 700;
+    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.woff");
+}
+
 *{
     padding: 0;
     margin: 0;
@@ -19,7 +68,7 @@ body{
 }
 
 .wrap > div > .container{
-    width: 1300px;
+    width: 1200px;
     display: flex;
 }
 
@@ -163,6 +212,11 @@ body{
 }
 
 .wrap > .main > .container > .group > .cont-box .cont .text .t-bold {
+    background-color: #feffad;
+    font-weight: bold;
+}
+
+.wrap > .main > .container > .group > .cont-box .cont .text .t-bold-tmp {
     font-weight: bold;
 }
 
@@ -263,13 +317,13 @@ background: #8c8c8c;
 }
 
 .wrap > .main > .container > .group.indv-project .cont-box .left{
-    width: 50%;
+    width: 45%;
     display: flex;
     justify-content: center;
 }
 
 .wrap > .main > .container > .group.indv-project .cont-box .right{
-    width: 50%;
+    width: 55%;
     align-items: center;
     display: flex;
 }
@@ -311,10 +365,11 @@ background: #8c8c8c;
 .wrap > .main > .container > .group.indv-project .info .images {
     overflow: hidden;
     width: 100%;
-    height: 400px;
+    height: 340px;
     outline: 1px solid #b3b3b3;
     position: relative;
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 
@@ -322,6 +377,78 @@ background: #8c8c8c;
     display: flex;
     flex-direction: column;
 }
+
+.b-project .list > li{
+    display: flex;
+    flex-direction: column;
+}
+
+.b-project .info{
+    display: flex;
+    flex-direction: column;
+}
+
+.b-project .info > div{
+    margin-bottom: 12px;
+}
+
+.b-project .info .company{
+    display: flex;
+    justify-content: space-between;
+    color: #737373;
+}
+
+.b-project .info .b-name{
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.b-project .info .b-name .sub{
+    color: #737373;
+    font-weight: 500;
+}
+
+.b-project .info .date{
+    color: #737373;
+}
+
+.b-project .info .date span{
+    margin-right: 10px;
+}
+
+.b-project .list li > .cont{
+    margin-top: 20px;
+}
+
+.wrap > .main > .container > .group > .cont-box .cont ul{
+    margin-top: 10px;
+}
+
+.wrap > .main > .container > .group > .cont-box .cont .add{
+    color: #1a7700;
+}
+
+.wrap > .main > .container > .group > .cont-box .cont .remove {
+    color: #898989;
+}
+
+.wrap > .main > .container > .group > .cont-box .item{
+    display: flex;
+    align-items: center;
+}
+
+.wrap > .main > .container > .group > .cont-box .cont .item i.dot {
+    font-size: .5rem;
+    margin-right: 5px;
+    color: #686868;
+}
+
+
+.b-project .list li > .cont .skills{
+    margin-top: 10px !important;
+}
+
 
 .bottom{
     margin-top: 130px;
@@ -359,7 +486,7 @@ background: #8c8c8c;
 .images .swiper-slide img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: fill;
     cursor: pointer;
 }
 
@@ -447,7 +574,11 @@ background: #8c8c8c;
 
 .etc .item .item-wrap .image{
     width: 100px;
-    margin-right: 20px;
+    margin-right: 30px;
+}
+
+.etc .item .item-wrap .image img{
+    width: 100px;
 }
 
 .etc .item .item-wrap .right {
@@ -819,7 +950,7 @@ background: #8c8c8c;
 
 .quick-menu {
     position: fixed;
-    right: 4%;
+    right: 3%;
     top: 25%;
     width: 80px;
     background-color: #d3d3d363;
@@ -879,4 +1010,10 @@ background: #8c8c8c;
 .makePdf{
     background: #6690ff !important;
     color: #fff !important;
+    font-weight: bold !important;
+}
+
+.selected {
+    background-color: #ffe1b5 !important;
+    font-weight: bold !important;
 }
