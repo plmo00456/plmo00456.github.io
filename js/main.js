@@ -36,13 +36,15 @@ window.onload = function(){
     const tier = document.querySelector("#tier");
     const solved = document.querySelector("#solved");
     const cls = document.querySelector("#class");
+
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function() {
         if (xhr.readyState === xhr.DONE) {
             if (xhr.status === 200 || xhr.status === 201) {
-                var data = xhr.responseText;
+                var data = JSON.parse(xhr.response);
+                console.log(data);
                 tierImg.src = "https://d2gd6pc034wcta.cloudfront.net/tier/" + data.tier + ".svg";
-                tier.innerHTML = tier(data.tier);
+                tier.innerHTML = tierStr(data.tier);
                 solved.innerHTML = numberWithCommas(data.solvedCount);
                 cls.innerHTML = numberWithCommas(data.class);
             } else {
@@ -50,7 +52,7 @@ window.onload = function(){
             }
         }
     };
-    xhr.open('GET', '//solved.ac/api/v3/user/show?handle=plmo00456');
+    xhr.open('GET', 'https://corsproxy.io/?https%3A%2F%2Fsolved.ac%2Fapi%2Fv3%2Fuser%2Fshow%3Fhandle%3Dplmo00456');
     xhr.send();
 
 }
@@ -106,12 +108,16 @@ function scrollToElem(elemId) {
 }
 
 function numberWithCommas(x) {
-    var parts = x.toString().split(".");
-    parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-    return parts.join(".");
+    try {
+        var parts = x.toString().split(".");
+        parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        return parts.join(".");
+    }catch(e){
+        return x;
+    }
 }
 
-function tier(x){
+function tierStr(x){
     switch(x){
         case 1:
             return "브론즈5";
