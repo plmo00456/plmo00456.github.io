@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="10ab3516-dabe-4632-bb98-d6ba5b35b55b" name="변경" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/portfolio.iml" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/.idea/portfolio.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/reset.css" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/css/reset.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/Cshap-logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/image/Cshap-logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/army.png" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/image/army.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/company.png" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/image/company.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/database.png" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/image/database.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/etc.png" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/image/etc.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/fram1.png" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/image/fram1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/fram2.png" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/image/fram2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/fram3.png" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/image/fram3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/fram4.png" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/image/fram4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/fram5.png" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/image/fram5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/pp1.png" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/image/pp1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/pp2.png" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/image/pp2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/pp3.png" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/image/pp3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/profile.png" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/image/profile.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/profile.png.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/image/profile.png.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/project1-logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/image/project1-logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/remember-hover.png" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/image/remember-hover.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/remember-ori.png" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/image/remember-ori.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/school1.png" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/image/school1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/school2.png" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/image/school2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/spring-logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/image/spring-logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/ts-hover.png" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/image/ts-hover.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/ts-ori.png" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/image/ts-ori.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/html2canvas.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/js/html2canvas.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/node_modules/.package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/font-applesdgothicneo/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/node_modules/font-applesdgothicneo/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/font-applesdgothicneo/css.local/all.css" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/node_modules/font-applesdgothicneo/css.local/all.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/font-applesdgothicneo/css/all.css" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/node_modules/font-applesdgothicneo/css/all.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/font-applesdgothicneo/fonts/100_AppleSDGothicNeo-Thin.otf" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/node_modules/font-applesdgothicneo/fonts/100_AppleSDGothicNeo-Thin.otf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/font-applesdgothicneo/fonts/100_AppleSDGothicNeo-Thin.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/node_modules/font-applesdgothicneo/fonts/100_AppleSDGothicNeo-Thin.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/font-applesdgothicneo/fonts/200_AppleSDGothicNeo-UltraLight.otf" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/node_modules/font-applesdgothicneo/fonts/200_AppleSDGothicNeo-UltraLight.otf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/font-applesdgothicneo/fonts/200_AppleSDGothicNeo-UltraLight.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/node_modules/font-applesdgothicneo/fonts/200_AppleSDGothicNeo-UltraLight.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/font-applesdgothicneo/fonts/300_AppleSDGothicNeo-Light.otf" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/node_modules/font-applesdgothicneo/fonts/300_AppleSDGothicNeo-Light.otf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/font-applesdgothicneo/fonts/300_AppleSDGothicNeo-Light.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/node_modules/font-applesdgothicneo/fonts/300_AppleSDGothicNeo-Light.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/font-applesdgothicneo/fonts/400_AppleSDGothicNeo-Medium.otf" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/node_modules/font-applesdgothicneo/fonts/400_AppleSDGothicNeo-Medium.otf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/font-applesdgothicneo/fonts/400_AppleSDGothicNeo-Medium.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/node_modules/font-applesdgothicneo/fonts/400_AppleSDGothicNeo-Medium.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/font-applesdgothicneo/fonts/500_AppleSDGothicNeo-Regular.otf" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/node_modules/font-applesdgothicneo/fonts/500_AppleSDGothicNeo-Regular.otf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/font-applesdgothicneo/fonts/500_AppleSDGothicNeo-Regular.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/node_modules/font-applesdgothicneo/fonts/500_AppleSDGothicNeo-Regular.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/font-applesdgothicneo/fonts/600_AppleSDGothicNeo-SemiBold.otf" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/node_modules/font-applesdgothicneo/fonts/600_AppleSDGothicNeo-SemiBold.otf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/font-applesdgothicneo/fonts/600_AppleSDGothicNeo-SemiBold.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/node_modules/font-applesdgothicneo/fonts/600_AppleSDGothicNeo-SemiBold.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/font-applesdgothicneo/fonts/700_AppleSDGothicNeo-Bold.otf" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/node_modules/font-applesdgothicneo/fonts/700_AppleSDGothicNeo-Bold.otf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/font-applesdgothicneo/fonts/700_AppleSDGothicNeo-Bold.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/node_modules/font-applesdgothicneo/fonts/700_AppleSDGothicNeo-Bold.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/font-applesdgothicneo/fonts/800_AppleSDGothicNeo-ExtraBold.otf" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/node_modules/font-applesdgothicneo/fonts/800_AppleSDGothicNeo-ExtraBold.otf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/font-applesdgothicneo/fonts/800_AppleSDGothicNeo-ExtraBold.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/node_modules/font-applesdgothicneo/fonts/800_AppleSDGothicNeo-ExtraBold.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/font-applesdgothicneo/fonts/900_AppleSDGothicNeo-Heavy.otf" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/node_modules/font-applesdgothicneo/fonts/900_AppleSDGothicNeo-Heavy.otf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/font-applesdgothicneo/fonts/900_AppleSDGothicNeo-Heavy.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/node_modules/font-applesdgothicneo/fonts/900_AppleSDGothicNeo-Heavy.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/font-applesdgothicneo/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/node_modules/font-applesdgothicneo/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/package.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2T3SboRlTeAehfUTK03UMuirXYa" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/PC/Desktop/wooreal/plmo00456.github.io",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "모듈",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.general",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\PC\Desktop\portfolio\image" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\PC\Desktop\wooreal\plmo00456.github.io\portfolio" />
+      <recent name="C:\Users\PC\Desktop\wooreal\plmo00456.github.io\image" />
+      <recent name="C:\Users\PC\Desktop\wooreal\plmo00456.github.io\plugin\timeline" />
+      <recent name="C:\Users\PC\Desktop\portfolio\image" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="디폴트 작업">
+      <changelist id="10ab3516-dabe-4632-bb98-d6ba5b35b55b" name="변경" comment="" />
+      <created>1690270344680</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1690270344680</updated>
+      <workItem from="1690270345718" duration="57000" />
+      <workItem from="1690270409540" duration="72000" />
+      <workItem from="1690270506975" duration="499000" />
+      <workItem from="1690286342298" duration="14374000" />
+      <workItem from="1690347107719" duration="7405000" />
+      <workItem from="1690362082852" duration="3000" />
+      <workItem from="1690363476463" duration="1456000" />
+      <workItem from="1690365389358" duration="54000" />
+      <workItem from="1690367243569" duration="3757000" />
+      <workItem from="1690474723956" duration="7441000" />
+      <workItem from="1690527955995" duration="4067000" />
+      <workItem from="1690548301766" duration="12114000" />
+      <workItem from="1690635622223" duration="16850000" />
+      <workItem from="1690695397354" duration="23254000" />
+      <workItem from="1690813325615" duration="1243000" />
+      <workItem from="1692099490278" duration="152000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>끝 없이 전진하는 중</title>
+    <script crossorigin="anonymous" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" src="https://code.jquery.com/jquery-3.7.0.js"></script>
+
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/790b1811b6.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+    <script type="text/javascript" src="js/html2canvas.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+<div class="wrap">
+    <div class="top">
+        <div class="container">
+            <div class="left">
+                <img src="image/profile.png">
+            </div>
+            <div class="right">
+                <div class="title">
+                    고객, 사용자 만족을 우선으로 하는 책임감 있고 꼼꼼한 4년차 개발자입니다.
+                </div>
+                <div class="name-box">
+                    <div class="full-name">박우진</div>
+                    <div class="link-btns">
+                        <a href="https://github.com/plmo00456" title="깃헙" target="_blank"><i class="fa-brands fa-github"></i></a>
+<!--                        <a href="#" title="리멤버" target="_blank">-->
+<!--                            <img class="ori" src="image/remember-ori.png">-->
+<!--                            <img class="hov" src="image/remember-hover.png">-->
+<!--                        </a>-->
+                        <a href="https://www.linkedin.com/in/%EC%9A%B0%EC%A7%84-%EB%B0%95-093b201bb/" title="링크드인" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://wooreal.tistory.com/" title="티스토리" target="_blank">
+                            <img class="ori" src="image/ts-ori.png">
+                            <img class="hov" src="image/ts-hover.png">
+                        </a>
+                    </div>
+                </div>
+                <div class="contact">
+                    <i class="fa-solid fa-envelope"></i> <span class="email">plmo00456@gmail.com</span>
+                    <i class="fa-solid fa-phone"></i><span class="phone">+82 10 2643 7269</span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="container">
+            <div class="group" id="menu1">
+                <div class="title">타임라인</div>
+                <div class="cont-box">
+                    <div class="cont">
+                        <div class="timeline-wrap">
+                            <div class="timeline">
+                                <div class="date" id="one">
+                                    <div class="title">
+                                        <img src="image/school1.png">
+                                        <span>빛고을고등학교</span>
+                                    </div>
+                                    <span class="date_st node">
+                                            <div class="val">2012.03</div>
+                                            <div class="v-line"></div>
+                                        </span>
+                                    <span class="date_ed node">
+                                            <div class="val">2015.02</div>
+                                            <div class="v-line"></div>
+                                        </span>
+                                    <div class="back"></div>
+                                </div>
+                                <div class="date" id="two">
+                                    <div class="title">
+                                        <img src="image/school2.png">
+                                        <span>조선이공대학교</span>
+                                    </div>
+                                    <span class="date_st node">
+                                            <div class="val"></div>
+                                            <div class="v-line"></div>
+                                        </span>
+                                    <span class="date_ed node">
+                                            <div class="val"></div>
+                                            <div class="v-line"></div>
+                                        </span>
+                                    <div class="back"></div>
+                                </div>
+                                <div class="date" id="three">
+                                    <div class="title">
+                                        <img src="image/army.png">
+                                        <span>육군 병장</span>
+                                    </div>
+                                    <span class="date_st node">
+                                            <div class="val"></div>
+                                            <div class="v-line"></div>
+                                        </span>
+                                    <span class="date_ed node">
+                                            <div class="val">2019.02</div>
+                                            <div class="v-line"></div>
+                                        </span>
+                                    <div class="back"></div>
+                                </div>
+                                <div class="date" id="four">
+                                    <div class="title">
+                                        <img src="image/company.png">
+                                        <span>[직장] 성산씨엔에스</span>
+                                    </div>
+                                    <span class="date_st node">
+                                            <div class="val"></div>
+                                            <div class="v-line"></div>
+                                        </span>
+                                    <span class="date_ed node">
+                                            <div class="val">2023.02</div>
+                                            <div class="v-line"></div>
+                                        </span>
+                                    <div class="back"></div>
+                                </div>
+                                <div class="timeline-date">
+                                    <ul>
+                                        <li>
+                                            <span class="dt">'12</span>
+                                            <span class="r-line">|</span>
+                                        </li>
+                                        <li>
+                                            <span class="dt">'13</span>
+                                            <span class="r-line">|</span>
+                                        </li>
+                                        <li>
+                                            <span class="dt">'14</span>
+                                            <span class="r-line">|</span>
+                                        </li>
+                                        <li>
+                                            <span class="dt">'15</span>
+                                            <span class="r-line">|</span>
+                                        </li>
+                                        <li>
+                                            <span class="dt">'16</span>
+                                            <span class="r-line">|</span>
+                                        </li>
+                                        <li>
+                                            <span class="dt">'17</span>
+                                            <span class="r-line">|</span>
+                                        </li>
+                                        <li>
+                                            <span class="dt">'18</span>
+                                            <span class="r-line">|</span>
+                                        </li>
+                                        <li>
+                                            <span class="dt">'19</span>
+                                            <span class="r-line">|</span>
+                                        </li>
+                                        <li>
+                                            <span class="dt">'20</span>
+                                            <span class="r-line">|</span>
+                                        </li>
+                                        <li>
+                                            <span class="dt">'21</span>
+                                            <span class="r-line">|</span>
+                                        </li>
+                                        <li>
+                                            <span class="dt">'22</span>
+                                            <span class="r-line">|</span>
+                                        </li>
+                                        <li>
+                                            <span class="dt">'23</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="group edu profile" id="menu2">
+                <div class="title">자기소개</div>
+                <div class="cont-box">
+                    <div class="cont" style="align-items: center;">
+                        <ul class="list" style="width: 25%; height: 230px">
+                            <li style="flex-direction: row;">
+                                <i class="fa-solid fa-person"></i>
+                                <span>1996.09.04</span>
+                                <span class="v-line">|</span>
+                                <span class="sub">만 26세</span>
+                            </li>
+                            <li style="flex-direction: row;">
+                                <i class="fa-solid fa-envelope"></i>
+                                <span>plmo00456@gmail.com</span>
+                            </li>
+                            <li style="flex-direction: row;">
+                                <i class="fa-solid fa-phone"></i>
+                                <span>+82 10 2643 7269</span>
+                            </li>
+                        </ul>
+                        <ul class="list" style="width: 75%; height: 230px;">
+                            <li>
+                                <div class="info">
+                                    <span class="school"><i class="fa-solid fa-check">&nbsp;</i>고객과 사용자를 핵심으로 생각하는 4년차 웹 개발자</span>
+                                </div>
+                                <div class="text" style="line-height: 1.4rem; font-size: .9rem; font-weight: 500; width: 650px">
+                                    <span>다양한 분야의 프로젝트를 수행한 경험이 있는 4년차 웹 개발자입니다. 주로 공공기관에서 활용되는 사이트의 개발을 담당해 왔습니다. 이를 통해 다양한 고객과의 사업 경험을 쌓으며 <b class="t-bold">고객의 요구사항을 섬세하게 파악</b>할 수 있는 역량을 키웠습니다. 또한 사용자 중심의 개발을 진행하면서 <b class="t-bold">고객에게 맞춤형 시스템을 제공하는 능력</b>도 향상시켜 왔습니다. 신 기술을 활용한 차별화된 고객 서비스 지원을 통해 <b class="t-bold">고객사에 도움이 되는 시스템을 개발하는데 목표</b>를 두고 끊임없이 노력하고 있으며, <b class="t-bold">매끄럽고 자연스러운 사용자 경험을 제공</b>하는 것을 지향하며 <b class="t-bold">고객과 사용자의 만족을 최우선</b>으로 생각합니다.</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="group" id="menu3">
+                <div class="title">기술 스택</div>
+                <div class="cont-box">
+                    <div class="cont">
+                        <ul class="list">
+                            <li>
+                                <div class="icon">
+                                    <img src="image/spring-logo.png">
+                                </div>
+                                <div class="name">
+                                    <span>Spring Framework</span>
+                                    <span class="star"><i class="fa-solid fa-star"></i></span>
+                                </div>
+                                <div class="cont">
+                                    웹 개발에 주로 자바 스프링 프레임워크를 사용하였습니다. 스프링의 객체 지향 및 모듈화 아키텍처를 완벽하게 이해하고 적용하여 효율적인 구조를
+                                    구축하였습니다. 또한, 스프링 시큐리티를 사용하여 애플리케이션의 보안을 강화하였고, MyBatis를 사용하여 효과적인 데이터베이스 관리 및 트랜잭션
+                                    처리를 구현하였습니다. RESTful API와의 연동도 원활하게 처리하여 최적화된 웹 서비스를 제공하기 위한 기본을 확립하였습니다.
+                                    <div class="skills">
+                                        <ul>
+                                            <li>Spring Boot<span class="star"><i class="fa-solid fa-star"></i></span>
+                                            </li>
+                                            <li>전자정부프레임워크<span class="star"><i class="fa-solid fa-star"></i></span></li>
+                                            <li>JSP<span class="star"><i class="fa-solid fa-star"></i></span></li>
+                                            <li>JSTL<span class="star"><i class="fa-solid fa-star"></i></span></li>
+                                            <li>Mybatis<span class="star"><i class="fa-solid fa-star"></i></span></li>
+                                            <li>WebSocket<span class="star"><i class="fa-solid fa-star"></i></span></li>
+                                            <li>JPA</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon">
+                                    <img src="image/Cshap-logo.png">
+                                </div>
+                                <div class="name">
+                                    <span>C#</span>
+                                    <span class="star"><i class="fa-solid fa-star"></i></span>
+                                </div>
+                                <div class="cont">
+                                    윈도우 기반 GUI 프로그램을 개발 할 때 주로 C#을 사용하였습니다. C#의 객체지향적인 특성을 활용하여 가독성과 유지 보수성이 높은 코드를
+                                    작성하였고, WPF와 같은 기술을 사용하여 사용자 경험을 향상시키는 모던한 인터페이스를 구축하였습니다. ASP를 사용하여 RESTful API를
+                                    구축하였고, 이를 통해 윈도우 기반 GUI 프로그램과 원활한 상호작용을 이루는 서비스를 제공하였습니다.
+                                    <div class="skills">
+                                        <ul>
+                                            <li>.Net<span class="star"><i class="fa-solid fa-star"></i></span></li>
+                                            <li>WPF<span class="star"><i class="fa-solid fa-star"></i></span></li>
+                                            <li>ASP</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon">
+                                    <img src="image/database.png">
+                                </div>
+                                <div class="name">
+                                    <span>DataBase</span>
+                                    <span class="star"><i class="fa-solid fa-star"></i></span>
+                                </div>
+                                <div class="cont">
+                                    주로 MySQL과 MariaDB를 사용하여 데이터베이스를 설계하고 관리하였습니다. 두 데이터베이스의 특성과 성능을 고려하여 효율적인 구조를 구축하고
+                                    쿼리 최적화를 진행해 응답 속도를 개선했습니다. 이 외에도, MSSQL, PostgreSQL, InfluxDB와 같은 데이터베이스를 활용한 경험도
+                                    있으며, 광범위한 데이터베이스 환경에서의 이해도와 호환성을 높이기 위해 끊임없이 공부해왔습니다.
+                                    <div class="skills">
+                                        <ul>
+                                            <li>MySQL<span class="star"><i class="fa-solid fa-star"></i></span></li>
+                                            <li>MariaDB<span class="star"><i class="fa-solid fa-star"></i></span></li>
+                                            <li>MSSQL</li>
+                                            <li>PostgreSQL</li>
+                                            <li>InfluxDB</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon">
+                                    <img src="image/etc.png">
+                                </div>
+                                <div class="name">
+                                    <span>ETC</span>
+                                    <span class="star"><i class="fa-solid fa-star"></i></span>
+                                </div>
+                                <div class="cont">
+                                    <div class="skills">
+                                        <ul>
+                                            <li>JavaScript<span class="star"><i class="fa-solid fa-star"></i></span>
+                                            </li>
+                                            <li>JQUERY<span class="star"><i class="fa-solid fa-star"></i></span></li>
+                                            <li>Apache Tomcat<span class="star"><i class="fa-solid fa-star"></i></span>
+                                            </li>
+                                            <li>Linux<span class="star"><i class="fa-solid fa-star"></i></span></li>
+                                            <li>AWS EC2</li>
+                                            <li>MS Azure Compute</li>
+                                            <li>C</li>
+                                            <li>C++</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="group indv-project" id="menu4">
+                <div class="title">개인 프로젝트</div>
+                <div class="cont-box" style="border-bottom: none;">
+                    <div class="title-wrap">
+                        <div class="title">
+                            <span class="name" style="font-size: 1.3rem; font-weight: bold;">포트폴리오</span>
+                        </div>
+                        <div class="sub-title">
+                            <span>2023년 07월 28일 ~ 2023년 07월 30일</span>
+                            <span>|</span>
+                            <span>3일</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="left">
+                            <div class="cont">
+                                <div class="info">
+                                    <div class="images">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide"><img src="image/pp1.png"></div>
+                                            <div class="swiper-slide"><img src="image/pp2.png"></div>
+                                            <div class="swiper-slide"><img src="image/pp3.png"></div>
+                                        </div>
+                                        <div class="swiper-pagination"></div>
+                                        <div class="swiper-button-prev"></div>
+                                        <div class="swiper-button-next"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="cont">
+                                <div class="text">
+                                    <div class="summary">나를 소개하기 위한 포트폴리오!</div>
+                                    저를 소개하기 위해 개발하였습니다. 카테고리는 <span class="t-bold">타임라인, 자기소개, 기술 스택, 개인 프로젝트, 프로젝트, 학력, 자격증, 경력, 기타</span> 이렇게 있습니다. <span class="t-bold">모든 Html, css 부분을 혼자 개발</span>하였습니다. <span class="t-bold">Solved AC Api를 Ajax로 불러와</span> 저의 알고리즘 문제 현황을 <span class="t-bold">실시간으로 확인 가능하게 적용</span> 하였습니다. 또한 <span class="t-bold">PDF파일 생성 기능</span>을 적용하였습니다.
+                                    <ul>
+                                        <li class="item">
+                                            <i class="dot fa-solid fa-circle" style="color:red;"></i>
+                                            <span style="font-size: .8rem; color: #626262;">PDF 생성 시 기타 탭 이미지가 안보이는 현상 발생, Svg to Image하여 크롬계열은 처리, Safari는 아직 미 처리</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="skills">
+                                    <ul>
+                                        <li>Github Page</li>
+                                        <li>HTML</li>
+                                        <li>CSS</li>
+                                        <li>JavaScript</li>
+                                        <li>Ajax</li>
+                                        <li class="lib">Jquery</li>
+                                        <li class="lib">Swiper</li>
+                                        <li class="lib">fancybox</li>
+                                        <li class="lib">Html2Canvas</li>
+                                        <li class="lib">jsPDF</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cont-box">
+                    <div class="title-wrap">
+                        <div class="title">
+                            <img class="name" src="image/project1-logo.png">
+                            <a class="link" href="https://fram.run.goorm.io/" target="_blank"><i class="fa-solid fa-link"></i></a>
+                        </div>
+                        <div class="sub-title">
+                            <span>2023년 04월 ~ 2023년 05월</span>
+                            <span>|</span>
+                            <span>1개월</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="left">
+                            <div class="cont">
+                                <div class="info">
+                                    <div class="images">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide"><img src="image/fram1.png"></div>
+                                            <div class="swiper-slide"><img src="image/fram2.png"></div>
+                                            <div class="swiper-slide"><img src="image/fram3.png"></div>
+                                            <div class="swiper-slide"><img src="image/fram4.png"></div>
+                                            <div class="swiper-slide"><img src="image/fram5.png"></div>
+                                        </div>
+                                        <div class="swiper-pagination"></div>
+                                        <div class="swiper-button-prev"></div>
+                                        <div class="swiper-button-next"></div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="cont">
+                                <div class="text">
+                                    <div class="summary">현재 내 주변의 식당들의 정보를 확인!</div>
+                                    부족한 기술 부분의 학습을 위해 개발하였습니다. Geolocation Api를 통해 <span class="t-bold">현재위치를 불러와</span>
+                                    그 <span class="t-bold">주변 식당들의 위치</span>를 카카오맵 지도 위에 매핑하여 <span class="t-bold">보여주는 기능</span>을
+                                    개발했습니다. 마커에 마우스를 올려 식당명과 평점을 볼 수 있고, 클릭 시 <span class="t-bold">식당의 정보를 확인 및 후기 작성</span>을 할 수 있게 구성하였습니다. <span class="t-bold">트래픽을 최소화</span>
+                                    하기 위해 다음 플레이트 <span class="t-bold">API를 이용하여 식당 정보와 이미지를 불러왔습니다.</span> 로그인 편의성을 위해 <span class="t-bold">네이버, 카카오, 구글의 SMS 로그인</span>을 포함시켰습니다.
+                                    1인 풀스택 개발하였습니다.
+                                    <ul>
+                                        <li class="add"><i class="fa-solid fa-plus"></i> Goorm IDE 클라우드 서버로 전환</li>
+                                        <li class="remove"><i class="fa-solid fa-minus"></i> Ms Azure Compute 서버 제거</li>
+                                    </ul>
+                                </div>
+                                <div class="skills">
+                                    <ul>
+                                        <li>Goorm IDE</li>
+                                        <li>Ubuntu 20.04</li>
+                                        <li>Spring Boot 2.7.12 (Spring 5.3.27)</li>
+                                        <li>Maven</li>
+                                        <li>MariaDB 10.3.38</li>
+                                        <li>openJDK 11</li>
+                                        <li>JPA</li>
+                                        <li>JSTL & JSP</li>
+                                        <li>JWT</li>
+                                        <li class="lib">Jquery</li>
+                                        <li class="lib">rateyo</li>
+                                        <li class="lib">star-rating</li>
+                                        <li class="lib">sweet-alert</li>
+                                        <li class="not-use">Microsoft Azure Cloud</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="group b-project" id="menu5">
+                <div class="title">대표 프로젝트</div>
+                <div class="cont-box">
+                    <div class="cont">
+                        <ul class="list">
+                            <li>
+                                <div class="info">
+                                    <div class="company">
+                                        <span>(주) 성산씨엔에스</span>
+                                        <span>기여도 : 40%</span>
+                                    </div>
+                                    <div class="b-name">
+                                        <span>광주광역시 일자리사업 성과관리시스템 고도화 구축 용역</span>
+                                        <span class="sub">|</span>
+                                        <span class="sub">한국고용정책연구원</span>
+                                    </div>
+                                    <div class="date">
+                                        <span>2022년 6월 ~ 2022년 9월</span>
+                                        <span class="v-line">|</span>
+                                        <span>3개월</span>
+                                        <span class="v-line">&gt;</span>
+                                        <span>개발</span>
+                                    </div>
+                                </div>
+                                <div class="cont">
+                                    기존 오래된 광주광역시 내 일자리사업들의 공고 및 사업을 관리하는 사이트의 고도화를 진행 하였습니다.
+                                    이전에 없던 기능인 회원가입, 로그인, sso 등 을 개발하였습니다.
+                                    또한 사이트의 확장성을 키우기 위해 기존 단순한 MVC 방식에서 Rest API 방식으로 전체 변경 하였고, Linux 플랫폼에서 서비스 운영하였습니다.
+                                    <ul>
+                                        <li class="item">
+                                            <i class="dot fa-solid fa-circle"></i>
+                                            사용자 회원가입, 로그인, SSO연동 기능 개발
+                                        </li>
+                                        <li class="item">
+                                            <i class="dot fa-solid fa-circle"></i>
+                                            MVC방식에서 Rest API 방식으로 변경
+                                        </li>
+                                    </ul>
+                                    <div class="skills">
+                                        <ul>
+                                            <li>Egov Framework<span class="star"><i class="fa-solid fa-star"></i></span></li>
+                                            <li>Java<span class="star"><i class="fa-solid fa-star"></i></span></li>
+                                            <li>Mysql<span class="star"><i class="fa-solid fa-star"></i></span></li>
+                                            <li>Tomcat Web / Was Server<span class="star"><i class="fa-solid fa-star"></i></span></li>
+                                            <li>Mybatis<span class="star"><i class="fa-solid fa-star"></i></span></li>
+                                            <li>Linux / Ubuntu<span class="star"><i class="fa-solid fa-star"></i></span></li>
+                                            <li>Rest API / Json<span class="star"><i class="fa-solid fa-star"></i></span></li>
+                                            <li class="lib">Ajax<span class="star"><i class="fa-solid fa-star"></i></span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="info">
+                                    <div class="company">
+                                        <span>(주) 성산씨엔에스</span>
+                                        <span>기여도 : 40%</span>
+                                    </div>
+                                    <div class="b-name">
+                                        <span>광주광역시 정책지원 데이터 통합구축 사업</span>
+                                        <span class="sub">|</span>
+                                        <span class="sub">광주광역시</span>
+                                    </div>
+                                    <div class="date">
+                                        <span>2022년 1월 ~ 2022년 11월</span>
+                                        <span class="v-line">|</span>
+                                        <span>11개월</span>
+                                        <span class="v-line">&gt;</span>
+                                        <span>개발</span>
+                                    </div>
+                                </div>
+                                <div class="cont">
+                                    '광주광역시 빅데이터 통합플랫폼' 사이트의 사용자 화면 및 관리자 화면의 기능을 추가하였습니다.
+                                    매일 10만건 이상되는 데이터셋 URL의 HTTP 상태와 제목을 비교하여 데이터의 정합성을 높이는 배치 프로그램을 개발하였습니다.
+                                    또한 고객들이 사이트에 접속하여 무엇을 다운받는지, 검색하는지, 어떤 게시 분류를 자주 확인하는지에 대한 대쉬보드 화면을 만들었고, 그 외 설문조사, 로그인 SSO 연동 등 고객 지형적, 사용자 중심적인 화면을 제공했습니다.
+                                    <ul>
+                                        <li class="item">
+                                            <i class="dot fa-solid fa-circle"></i>
+                                            매일 등록된 URL의 데이터 정합성을 검사하는 배치프로그램 개발
+                                        </li>
+                                        <li class="item">
+                                            <i class="dot fa-solid fa-circle"></i>
+                                            사용자 설문조사, 로그인 SSO연동 화면 및 기능 개발
+                                        </li>
+                                        <li class="item">
+                                            <i class="dot fa-solid fa-circle"></i>
+                                            관리자화면 대시보드 화면 및 기능 개발
+                                        </li>
+                                    </ul>
+                                    <div class="skills">
+                                        <ul>
+                                            <li>Egov Framework<span class="star"><i class="fa-solid fa-star"></i></span></li>
+                                            <li>Java<span class="star"><i class="fa-solid fa-star"></i></span></li>
+                                            <li>Mysql<span class="star"><i class="fa-solid fa-star"></i></span></li>
+                                            <li>Tomcat Web / Was Server<span class="star"><i class="fa-solid fa-star"></i></span></li>
+                                            <li>Mybatis<span class="star"><i class="fa-solid fa-star"></i></span></li>
+                                            <li>Linux / Ubuntu<span class="star"><i class="fa-solid fa-star"></i></span></li>
+                                            <li>Rest API / Json<span class="star"><i class="fa-solid fa-star"></i></span></li>
+                                            <li class="lib">Ajax<span class="star"><i class="fa-solid fa-star"></i></span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="info">
+                                    <div class="company">
+                                        <span>(주) 성산씨엔에스</span>
+                                        <span>기여도 : 80%</span>
+                                    </div>
+                                    <div class="b-name">
+                                        <span>비상발전기 및 잔여 유량 알림 표출 시스템 개발</span>
+                                        <span class="sub">|</span>
+                                        <span class="sub">도로공사</span>
+                                    </div>
+                                    <div class="date">
+                                        <span>2022년 1월 ~ 2022년 7월</span>
+                                        <span class="v-line">|</span>
+                                        <span>7개월</span>
+                                        <span class="v-line">&gt;</span>
+                                        <span>시스템 설계, DB 설계 및 구축운용, 개발</span>
+                                    </div>
+                                </div>
+                                <div class="cont">
+                                    남원 터널관리소에 터널을 관제하는 CCTV 화면 위 현재 유류량 및 발전기 가동 상태를 띄워주는 시스템을 개발하였습니다.
+                                    시스템 설계부터 DB설계와 기획, 개발까지 진행하였습니다.
+                                    세부적인 시스템 내용은 평소에는 발전기의 유류량을 표시를, 비상 발전기가 가동됐을 경우 '비상발전기 가동' 등 메세지를 띄워주며, 관리자가 눈에 잘 띄겠금 테두리 및 색상 반전 효과 등 옵션을 추가하였습니다.
+                                    제일 중점으로 둔 점은 남원 터널관리소 뿐만 아니라 그 외 터미널과의 호환성도 중요시 하여 진행하였습니다.
+                                    <div class="skills">
+                                        <ul>
+                                            <li>C#<span class="star"><i class="fa-solid fa-star"></i></span></li>
+                                            <li>Asp, API<span class="star"><i class="fa-solid fa-star"></i></span></li>
+                                            <li>SQLite<span class="star"><i class="fa-solid fa-star"></i></span></li>
+                                            <li>Mysql<span class="star"><i class="fa-solid fa-star"></i></span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="info">
+                                    <div class="company">
+                                        <span>(주) 성산씨엔에스</span>
+                                        <span>기여도 : 80%</span>
+                                    </div>
+                                    <div class="b-name">
+                                        <span>5·18 민주화운동기록관 통합전원제어 시스템 개발</span>
+                                        <span class="sub">|</span>
+                                        <span class="sub">5·18 민주화운동기록관</span>
+                                    </div>
+                                    <div class="date">
+                                        <span>2021년 2월 ~ 2021년 11월</span>
+                                        <span class="v-line">|</span>
+                                        <span>10개월</span>
+                                        <span class="v-line">&gt;</span>
+                                        <span>시스템 설계, DB 설계 및 구축운용, 개발</span>
+                                    </div>
+                                </div>
+                                <div class="cont">
+                                    '5·18 민주화운동기록관'내 전시기기들의 전원을 제어하는 시스템을 개발하였습니다.
+                                    당시 기록관 직원들이 수동으로 전시기기 전원을 제어하는 불편함이 있었습니다. 그러기에 웹을 통한 전시기기의 전원을 한곳에서 제어를 할 수 있으며, 설정 시 지정한 시간에 자동으로 전원을 제어하는 기능을 넣었습니다.
+                                    또 한 미디어 전시기기가 있는만큼 웹에서 영상을 업로드 및 모니터링 하는 기능을 추가하였습니다.
+                                    TV, 프로젝터, 키오스크 등 다양한 기기에 따른 구성방안을 제안 및 구현 하였습니다.
+                                    <ul>
+                                        <li class="item">
+                                            <i class="dot fa-solid fa-circle"></i>
+                                            아두이노 전원제어 모듈 개발
+                                        </li>
+                                        <li class="item">
+                                            <i class="dot fa-solid fa-circle"></i>
+                                            미디어 재생 및 제어 관리 에이전트 개발
+                                        </li>
+                                        <li class="item">
+                                            <i class="dot fa-solid fa-circle"></i>
+                                            평균 전기 사용량 차트 화면 및 기능 개발
+                                        </li>
+                                        <li class="item">
+                                            <i class="dot fa-solid fa-circle"></i>
+                                            시스템 전원 관리 제어 화면 및 기능개발
+                                        </li>
+                                    </ul>
+                                    <div class="skills">
+                                        <ul>
+                                            <li>Spring Boot<span class="star"><i class="fa-solid fa-star"></i></span></li>
+                                            <li>MySQL<span class="star"><i class="fa-solid fa-star"></i></span></li>
+                                            <li>WebSocket<span class="star"><i class="fa-solid fa-star"></i></span></li>
+                                            <li>Tomcat Web / Was Server<span class="star"><i class="fa-solid fa-star"></i></span></li>
+                                            <li>C<span class="star"><i class="fa-solid fa-star"></i></span></li>
+                                            <li>Arduino<span class="star"><i class="fa-solid fa-star"></i></span></li>
+                                            <li>Raspberry Pi<span class="star"><i class="fa-solid fa-star"></i></span></li>
+                                            <li>Cent OS<span class="star"><i class="fa-solid fa-star"></i></span></li>
+                                            <li class="lib">Ajax<span class="star"><i class="fa-solid fa-star"></i></span></li>
+                                            <li class="lib">AmChart4<span class="star"><i class="fa-solid fa-star"></i></span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="info">
+                                    <div class="company">
+                                        <span>(주) 성산씨엔에스</span>
+                                        <span>기여도 : 100%</span>
+                                    </div>
+                                    <div class="b-name">
+                                        <span>광주문화재단 근태관리 연동프로그램 개발</span>
+                                        <span class="sub">|</span>
+                                        <span class="sub">광주문화재단</span>
+                                    </div>
+                                    <div class="date">
+                                        <span>2020년 12월 ~ 2021년 1월</span>
+                                        <span class="v-line">|</span>
+                                        <span>2개월</span>
+                                        <span class="v-line">&gt;</span>
+                                        <span>시스템 설계, DB 설계 및 구축운용, 개발</span>
+                                    </div>
+                                </div>
+                                <div class="cont">
+                                    '광주문화재단'의 기존 지문리더기와 그룹웨어 내 지문리더기 DB가 달라 출/퇴근 시 그룹웨어에 데이터를 수동으로 등록하는 불편함이 있었습니다.
+                                    배치 프로그램을 이용하여 지문리더기(MsSql)에서 그룹웨어(MySql)로 데이터를 마이그레이션 하여 연동을 시켜주는 기능을 구현하였습니다.
+                                    그 외에도 고객의 요구사항을 적극 반영하여 복잡한 그룹웨어가 아닌 GUI로 쉽게 근태 관리를 할 수 있는 프로그램도 개발하였습니다.
+                                    <ul>
+                                        <li class="item">
+                                            <i class="dot fa-solid fa-circle"></i>
+                                            MSSQL -> MySQL 데이터 마이그레이션 프로그램 개발
+                                        </li>
+                                        <li class="item">
+                                            <i class="dot fa-solid fa-circle"></i>
+                                            근태 관리 GUI 프로그램 개발
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li class="add"><i class="fa-solid fa-plus"></i> 담당자의 요구사항에 따라 GUI를 구성하기 위해 C# 으로 변경</li>
+                                        <li class="remove"><i class="fa-solid fa-minus"></i> Java 로직 삭제</li>
+                                    </ul>
+                                    <div class="skills">
+                                        <ul>
+                                            <li>C#<span class="star"><i class="fa-solid fa-star"></i></span></li>
+                                            <li>Asp, API<span class="star"><i class="fa-solid fa-star"></i></span></li>
+                                            <li>MsSQL<span class="star"><i class="fa-solid fa-star"></i></span></li>
+                                            <li>MySQL<span class="star"><i class="fa-solid fa-star"></i></span></li>
+                                            <li class="not-use">Java</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="info">
+                                    <div class="company">
+                                        <span>(주) 성산씨엔에스</span>
+                                        <span>기여도 : 100%</span>
+                                    </div>
+                                    <div class="b-name">
+                                        <span>유지보수 홈페이지 모니터링 프로그램 개발</span>
+                                        <span class="sub">|</span>
+                                        <span class="sub">(주) 성산씨엔에스</span>
+                                    </div>
+                                    <div class="date">
+                                        <span>2020년 1월 ~ 2020년 3월</span>
+                                        <span class="v-line">|</span>
+                                        <span>3개월</span>
+                                        <span class="v-line">&gt;</span>
+                                        <span>시스템 설계, DB 설계 및 구축운용, 개발</span>
+                                    </div>
+                                </div>
+                                <div class="cont">
+                                    회사 내 유지보수 홈페이지를 유지보수 하기 위해 프로그램을 개발하였습니다.
+                                    홈페이지 상태를 한눈에 보기 쉽게 하기위해 웹 서버와 GUI형태의 프로그램으로 설계했으며, 그로인해 C#으로 개발을 하였습니다.
+                                    등록된 사이트에 오류가 발생한 경우 사이트 별 담당자에게 문자를 전송하는 시스템입니다.
+                                    SQLite를 통해 사이트와 담당자의 정보를 저장하고, SMS API를 이용하여 담당자에게 사이트명, 상태이상 오류 코드, 사이트주소를 문자를 전송하였습니다.
+                                    <ul>
+                                        <li class="item">
+                                            <i class="dot fa-solid fa-circle"></i>
+                                            차트와 테이블을 이용한 홈페이지 상태 통계 화면 및 기능 개발
+                                        </li>
+                                        <li class="item">
+                                            <i class="dot fa-solid fa-circle"></i>
+                                            등록된 홈페이지의 상태를 확인하는 기능 개발
+                                        </li>
+                                        <li class="item">
+                                            <i class="dot fa-solid fa-circle"></i>
+                                            SMS 전송 기능 개발
+                                        </li>
+                                    </ul>
+                                    <div class="skills">
+                                        <ul>
+                                            <li>Spring Boot<span class="star"><i class="fa-solid fa-star"></i></span></li>
+                                            <li>C#<span class="star"><i class="fa-solid fa-star"></i></span></li>
+                                            <li>SMS<span class="star"><i class="fa-solid fa-star"></i></span></li>
+                                            <li>SQLite<span class="star"><i class="fa-solid fa-star"></i></span></li>
+                                            <li class="lib">Ajax<span class="star"><i class="fa-solid fa-star"></i></span></li>
+                                            <li class="lib">AmChart4<span class="star"><i class="fa-solid fa-star"></i></span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="info">
+                                    <div class="company">
+                                        <span>(주) 성산씨엔에스</span>
+                                        <span>기여도 : 30%</span>
+                                    </div>
+                                    <div class="b-name">
+                                        <span>광주광역시 주택통계시스템 구축</span>
+                                        <span class="sub">|</span>
+                                        <span class="sub">광주광역시청</span>
+                                    </div>
+                                    <div class="date">
+                                        <span>2019년 12월 ~ 2020년 4월</span>
+                                        <span class="v-line">|</span>
+                                        <span>5개월</span>
+                                        <span class="v-line">&gt;</span>
+                                        <span>DB 설계, 개발</span>
+                                    </div>
+                                </div>
+                                <div class="cont">
+                                    광주광역시청 주택정책과에서 사용할 사이트를 개발하였습니다. 화면에 지도와 차트를 띄워 광주광역시 내 주택들의 현황을 한눈에 볼 수 있게 개발 하였습니다.
+                                    <ul>
+                                        <li class="item">
+                                            <i class="dot fa-solid fa-circle"></i>
+                                            차트와 테이블을 이용한 주택통계 화면 개발
+                                        </li>
+                                    </ul>
+                                    <div class="skills">
+                                        <ul>
+                                            <li>Egov Framework<span class="star"><i class="fa-solid fa-star"></i></span></li>
+                                            <li>MySQL<span class="star"><i class="fa-solid fa-star"></i></span></li>
+                                            <li>Tomcat Web / Was Server<span class="star"><i class="fa-solid fa-star"></i></span></li>
+                                            <li class="lib">AmChart4<span class="star"><i class="fa-solid fa-star"></i></span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="group edu" id="menu6">
+                <div class="title">학력</div>
+                <div class="cont-box">
+                    <div class="cont">
+                        <ul class="list">
+                            <li>
+                                <div class="info">
+                                    <span class="school">빛고을고등학교</span>
+                                    <span class="v-line">|</span>
+                                    <span class="sub">졸업</span>
+                                </div>
+                                <div class="sub">
+                                    <span>2012년 3월 ~ 2015년 2월</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="info">
+                                    <span class="school">조선이공대학교</span>
+                                    <span class="v-line">|</span>
+                                    <span class="sub">졸업</span>
+                                </div>
+                                <div class="sub">
+                                    <span>2015년 3월 ~ 2019년 2월</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="group edu" id="menu7">
+                <div class="title">자격증</div>
+                <div class="cont-box">
+                    <div class="cont">
+                        <ul class="list">
+                            <li>
+                                <div class="info">
+                                    <span class="school">컴퓨터활용능력 1급</span>
+                                    <span class="v-line">|</span>
+                                    <span class="sub">대한상공회의소</span>
+                                </div>
+                                <div class="sub">
+                                    <span>2023년 3월 17일</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="info">
+                                    <span class="school">한국사능력검정 3급</span>
+                                    <span class="v-line">|</span>
+                                    <span class="sub">국사편찬위원회</span>
+                                </div>
+                                <div class="sub">
+                                    <span>2023년 2월 24일</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="info">
+                                    <span class="school">정보처리기사</span>
+                                    <span class="v-line">|</span>
+                                    <span class="sub">한국산업인력공단</span>
+                                </div>
+                                <div class="sub">
+                                    <span>2021년 6월 2일</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="info">
+                                    <span class="school">2종 보통 운전면허증</span>
+                                    <span class="v-line">|</span>
+                                    <span class="sub">경찰청</span>
+                                </div>
+                                <div class="sub">
+                                    <span>2019년 2월 22일</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="info">
+                                    <span class="school">네트워크관리사 2급</span>
+                                    <span class="v-line">|</span>
+                                    <span class="sub">한국정보통신자격협회</span>
+                                </div>
+                                <div class="sub">
+                                    <span>2015년 11월 10일</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="info">
+                                    <span class="school">리눅스마스터 2급</span>
+                                    <span class="v-line">|</span>
+                                    <span class="sub">한국정보통신진흥협회</span>
+                                </div>
+                                <div class="sub">
+                                    <span>2015년 7월 3일</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="group edu" id="menu8">
+                <div class="title">경력</div>
+                <div class="cont-box">
+                    <div class="cont">
+                        <ul class="list">
+                            <li>
+                                <div class="info">
+                                    <span class="school">성산씨엔에스</span>
+                                    <span class="v-line">|</span>
+                                    <span class="sub">개발팀 - 대리</span>
+                                </div>
+                                <div class="sub">
+                                    <span>2019년 5월 13일 ~ 2023 2월 1일</span>
+                                    <span class="v-line">|</span>
+                                    <span class="sub">3년 10개월</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="group etc" id="menu9">
+                <div class="title">기타</div>
+                <div class="cont-box">
+                    <div class="cont">
+                        <div class="item" style="flex-direction: column;">
+                            <div class="item-wrap">
+                                <div class="image">
+                                    <img id="al-tier" src="#">
+                                </div>
+                                <div class="right">
+                                    <div>
+                                        <span style="font-weight: 700;">등급 : </span>
+                                        <span id="tier"></span>
+                                    </div>
+                                    <div>
+                                        <span style="font-weight: 700;">맞은 문제 : </span>
+                                        <span id="solved"></span>
+                                    </div>
+                                    <div>
+                                        <span style="font-weight: 700;">클래스 : </span>
+                                        <span id="class"></span>
+                                    </div>
+                                    <span>※ 실시간 반영</span>
+                                </div>
+                            </div>
+                            <div class="title">코딩 테스트 공부</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom">
+
+    </div>
+</div>
+<div class="modal" id="imageModal" data-html2canvas-ignore>
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImage">
+</div>
+
+<div id="loading-overlay" class="hidden" data-html2canvas-ignore>
+    <div id="loading-spinner"></div>
+</div>
+
+<div class="quick-menu" data-html2canvas-ignore>
+    <ul>
+        <li><button onclick="scrollToElem('menu1')" id="menu1Btn">타임라인</button></li>
+        <li><button onclick="scrollToElem('menu2')" id="menu2Btn">자기소개</button></li>
+        <li><button onclick="scrollToElem('menu3')" id="menu3Btn">기술스택</button></li>
+        <li><button onclick="scrollToElem('menu4')" id="menu4Btn">개인<br/>프로젝트</button></li>
+        <li><button onclick="scrollToElem('menu5')" id="menu5Btn">대표<br/>프로젝트</button></li>
+        <li><button onclick="scrollToElem('menu6')" id="menu6Btn">학력</button></li>
+        <li><button onclick="scrollToElem('menu7')" id="menu7Btn">자격증</button></li>
+        <li><button onclick="scrollToElem('menu8')" id="menu8Btn">경력</button></li>
+        <li><button onclick="scrollToElem('menu9')" id="menu9Btn">기타</button></li>
+        <li><button class="makePdf" onclick="pdfMake()">PDF 생성</button></li>
+    </ul>
+</div>
+
+</body>
+
+</html>
