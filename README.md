@@ -1,10 +1,10 @@
 <div style="width: 800px; display: flex; justify-content: center; flex-direction: column;">
     <div style="margin: 0 auto;">    
         <h3>👋 &nbsp;책임감을 우선으로 하는 개발자 박우진입니다. ☺️</h3>
-        <div>✔️ &nbsp;주로 스프링을 이용한 백엔드 개발을 합니다.</div>
-        <div>✔️ &nbsp;고객과 사용자 만족을 최우선 하여 개발하는 것을 좋아합니다.</div>
-        <div>✔️ &nbsp;신 기술을 접하고 시도해보는 것을 좋아합니다.</div>
-        <div>✔️ &nbsp;저에 대해 궁금하시다면 <a href="https://plmo00456.github.io/portfolio/">프로필</a>를 방문해주세요.</div>
+        <div style="width: 500px;">✔️ &nbsp;주로 스프링을 이용한 백엔드 개발을 합니다.</div>
+        <div style="width: 500px;">✔️ &nbsp;고객과 사용자 만족을 최우선 하여 개발하는 것을 좋아합니다.</div>
+        <div style="width: 500px;">✔️ &nbsp;신 기술을 접하고 시도해보는 것을 좋아합니다.</div>
+        <div style="width: 500px;">✔️ &nbsp;저에 대해 궁금하시다면 <a href="https://plmo00456.github.io/portfolio/">프로필</a>를 방문해주세요.</div>
     </div>
     <div align=center style="margin-top: 15px;">
         <h3>📚 Tech Stack 📚</h3>
