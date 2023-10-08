@@ -547,6 +547,10 @@ background: #8c8c8c;
     color: #ebebeb;
 }
 
+.etc .cont{
+    display: flex;
+}
+
 .etc .item{
     width: 300px;
 }
@@ -565,6 +569,7 @@ background: #8c8c8c;
     border: 1px solid #d5d5d5;
     margin-bottom: 10px;
     display: flex;
+    height: 150px;
 }
 
 .etc .item .item-wrap div{

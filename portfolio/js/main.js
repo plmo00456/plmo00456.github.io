@@ -32,6 +32,8 @@ window.onload = function(){
         }
     });
 
+
+    // 백준 정보 가져오기
     const tierImg = document.querySelector("#al-tier");
     const tier = document.querySelector("#tier");
     const solved = document.querySelector("#solved");
@@ -58,6 +60,27 @@ window.onload = function(){
     xhr.open('GET', 'https://corsproxy.io/?https%3A%2F%2Fsolved.ac%2Fapi%2Fv3%2Fuser%2Fshow%3Fhandle%3Dplmo00456');
     xhr.send();
 
+
+    // 프로그래머스 데이터 가져오기
+    const score = document.querySelector("#score");
+    const solvedChallengesCount = document.querySelector("#solvedChallengesCount");
+    const updateDate = document.querySelector("#updateDate");
+
+    var xhr2 = new XMLHttpRequest();
+    xhr2.onreadystatechange = function() {
+        if (xhr2.readyState === xhr2.DONE) {
+            if (xhr2.status === 200 || xhr2.status === 201) {
+                var data = JSON.parse(xhr2.response);
+                score.innerHTML = addCommas(data.score);
+                solvedChallengesCount.innerHTML = addCommas(data.solvedChallengesCount);
+                updateDate.innerHTML = "※ " + data.updateDate + " 반영";
+            } else {
+                console.error(xhr2.responseText);
+            }
+        }
+    };
+    xhr2.open('GET', 'file/programmers_status.json');
+    xhr2.send();
 }
 
 const pdfMake = () => {
@@ -69,38 +92,63 @@ const pdfMake = () => {
         e.classList.add("t-bold-tmp");
     });
 
-    html2canvas($('body')[0]).then(function(canvas) {
-        let imgData = canvas.toDataURL('image/jpeg', 1);
+    let doc = new jsPDF('p', 'mm');
+    let imgWidth = 210; // 이미지 가로 길이(mm) A4 기준
+    let pageHeight = imgWidth * 1.414;  // 출력 페이지 세로 길이 계산 A4 기준
 
-        let imgWidth = 210; // 이미지 가로 길이(mm) A4 기준
-        let pageHeight = imgWidth * 1.414;  // 출력 페이지 세로 길이 계산 A4 기준
-        let imgHeight = canvas.height * imgWidth / canvas.width;
-        let heightLeft = imgHeight;
+    // 로딩 화면 보이기
+    showLoadingOverlay();
 
-        let doc = new jsPDF('p', 'mm');
-        let position = 0;
+    // 캡쳐할 요소 그룹
+    const groups = [['.top', '#menu1', '#menu2', '#menu3'], ['#menu4'], ['#menu5', '#menu6', '#menu7', '#menu8', '#menu9']];
 
-        // 첫 페이지 출력
-        doc.addImage(imgData, 'JPEG', 0, position, imgWidth, imgHeight);
-        heightLeft -= pageHeight;
+    const captureGroupAndAddToPdf = (group) => {
+        // 모든 요소를 일단 숨김
+        $('.top').hide();
+        $('.main .container').children().hide();
 
-        // 한 페이지 이상일 경우 루프 돌면서 출력
-        while (heightLeft >= 20) {
-            position = heightLeft - imgHeight;
+        // 현재 그룹의 요소만 보임
+        group.forEach(selector => {
+            $(selector).show();
+        });
+
+        return html2canvas($('body')[0]).then(canvas => {
+            let imgData = canvas.toDataURL('image/jpeg', 1);
+            let imgHeight = canvas.height * imgWidth / canvas.width;
+            let heightLeft = imgHeight;
+            let position = 0;
+
             doc.addPage();
-            doc.addImage(imgData, 'JPEG', 0, position, imgWidth, imgHeight);
-            heightLeft -= pageHeight;
-        }
+            position = heightLeft - imgHeight;
 
-        let today = new Date();
-        let year = today.getFullYear();
-        let month = ('0' + (today.getMonth() + 1)).slice(-2);
-        let day = ('0' + today.getDate()).slice(-2);
-        let hours = ('0' + today.getHours()).slice(-2);
-        let minutes = ('0' + today.getMinutes()).slice(-2);
+            // 첫 페이지 출력
+            doc.addImage(imgData, 'JPEG', 0, position ,imgWidth ,imgHeight);
+            // 한 페이지 이상일 경우 루프 돌면서 출력
+            while (heightLeft >= pageHeight +20) {
+                position -= pageHeight;
+                doc.addPage();
+                doc.addImage(imgData, 'JPEG', 0, position ,imgWidth ,imgHeight);
+                heightLeft -= pageHeight;
+            }
+        });
+    };
 
-        let dateString = year + month + day + hours + minutes;
+    groups.reduce((promiseChain, currentGroup) => {
+        return promiseChain.then(() => captureGroupAndAddToPdf(currentGroup))
+            .then(() => $('body .wrap').children().show());   // 여기서 모든 요소를 다시 보임.
+    }, Promise.resolve()).then(() => {
 
+        let today=new Date();
+        let year=today.getFullYear();
+        let month=('0'+(today.getMonth()+1)).slice(-2);
+        let day=('0'+today.getDate()).slice(-2);
+        let hours=('0'+today.getHours()).slice(-2);
+        let minutes=('0'+today.getMinutes()).slice(-2);
+
+        var dateString=year+month+day+hours+minutes;
+
+        // 첫장에 빈 화면이 존재해 첫장 삭제
+        doc.deletePage(1);
         // 파일 저장
         doc.save("박우진_"+dateString+'.pdf');
 
@@ -108,9 +156,13 @@ const pdfMake = () => {
             e.classList.add("t-bold");
             e.classList.remove("t-bold-tmp");
         });
+
+        $('body .wrap').children().show();
+        $('.main .container').children().show();
         // 로딩 화면 숨기기
         hideLoadingOverlay();
     });
+
 }
 document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("scroll", function () {
@@ -255,4 +307,8 @@ function makeCnavas(){
 function isChromeBasedBrowser() {
     const userAgent = window.navigator.userAgent.toLowerCase();
     return userAgent.includes('chrome') || userAgent.includes('chromium');
+}
+
+function addCommas(num) {
+    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
