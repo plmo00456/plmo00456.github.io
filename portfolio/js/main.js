@@ -1,4 +1,5 @@
 window.onload = function(){
+    let currentSwiper = 0;
     const swiper = new Swiper('.indv-project .images', {
         loop: true,
         pagination: {
@@ -8,7 +9,22 @@ window.onload = function(){
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
-    });
+        speed: 400,
+        spaceBetween: 100,
+    })
+    for(let i = 0; i<swiper.length; i++){
+        swiper[i].on('click', () => {
+            currentSwiper = i;
+        })
+        swiper[i].on('slideChange', (e) =>  {
+            currentSwiper = i;
+            const img = e.slides[e.activeIndex].querySelector("img").src;
+            if(img){
+                modalImage.src = img;
+            }
+        });
+    }
+
 
     const modal = document.getElementById("imageModal");
     const modalImage = document.getElementById("modalImage");
@@ -22,7 +38,7 @@ window.onload = function(){
         });
     });
 
-    closeButton.addEventListener("click", () => {
+    closeButton.addEventListener("click", (e) => {
         modal.classList.remove("open");
     });
 
@@ -31,6 +47,18 @@ window.onload = function(){
             modal.classList.remove("open");
         }
     });
+
+    document.addEventListener("keydown", (e) => {
+        if(modal.classList.contains("open")){
+            if(e.key === 'Escape'){
+                modal.classList.remove("open");
+            }else if(e.key === 'ArrowLeft'){
+                swiper[currentSwiper].slidePrev();
+            }else if(e.key === 'ArrowRight'){
+                swiper[currentSwiper].slideNext();
+            }
+        }
+    })
 
 
     // 백준 정보 가져오기
