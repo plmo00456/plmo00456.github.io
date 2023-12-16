@@ -1,10 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
 
-/**
- * http://applemusic.tumblr.com/
- * https://jsfiddle.net/xq56dmrh/
- */
-
 /** Ultra Light */
 @font-face {
     font-family: "San Francisco";
@@ -56,6 +51,7 @@ body{
     width: 100vw;
     overflow-x: hidden;
 }
+
 .wrap{
     display: flex;
     justify-content: center;
@@ -729,10 +725,23 @@ background: #8c8c8c;
     font-weight: bold;
     color: #00c7ff;
 }
+
 .timeline .date#one .title img{
+    display: none;
+}
+
+html[data-theme="dark"] .timeline .date#one .title img.dark{
+    display: inline-block;
     width: 18px;
     margin: 0 5px;
 }
+
+html[data-theme="light"] .timeline .date#one .title img:not(.dark){
+    display: inline-block;
+    width: 18px;
+    margin: 0 5px;
+}
+
 .timeline .date#one .back{
     width: 216px;
     height: 40px;
@@ -795,7 +804,19 @@ background: #8c8c8c;
     font-weight: bold;
     color: #3a7a39;
 }
+
 .timeline .date#two .title img{
+    display: none;
+}
+
+html[data-theme="dark"] .timeline .date#two .title img.dark{
+    display: inline-block;
+    width: 18px;
+    margin: 0 5px;
+}
+
+html[data-theme="light"] .timeline .date#two .title img:not(.dark){
+    display: inline-block;
     width: 18px;
     margin: 0 5px;
 }
@@ -856,6 +877,17 @@ background: #8c8c8c;
 }
 
 .timeline .date#three .title img{
+    display: none;
+}
+
+html[data-theme="dark"] .timeline .date#three .title img.dark{
+    display: inline-block;
+    width: 18px;
+    margin: 0 5px;
+}
+
+html[data-theme="light"] .timeline .date#three .title img:not(.dark){
+    display: inline-block;
     width: 18px;
     margin: 0 5px;
 }
@@ -914,7 +946,19 @@ background: #8c8c8c;
     font-weight: bold;
     color: #d95d5d;
 }
+
 .timeline .date#four .title img{
+    display: none;
+}
+
+html[data-theme="dark"] .timeline .date#four .title img.dark{
+    display: inline-block;
+    width: 18px;
+    margin: 0 5px;
+}
+
+html[data-theme="light"] .timeline .date#four .title img:not(.dark){
+    display: inline-block;
     width: 18px;
     margin: 0 5px;
 }
@@ -982,7 +1026,7 @@ background: #8c8c8c;
 .quick-menu li {
     margin-bottom: 10px;
 }
-.quick-menu button {
+.quick-menu li button {
     width: 100%;
     background-color: white;
     border: 1px solid black;
@@ -1033,4 +1077,102 @@ background: #8c8c8c;
 .selected {
     background-color: #ffe1b5 !important;
     font-weight: bold !important;
+}
+
+:root {
+    --clr-background: #efefef;
+    --clr-text: #333333;
+    --clr-toggle: #e9c46a;
+}
+
+html[data-theme='dark'] {
+    --clr-background: #333333;
+    --clr-text: #efefef;
+    --clr-toggle: #345b6f;
+}
+
+.theme-switch {
+    scale: .7;
+    --diameter: 2rem;
+    --spacing: 0.3rem;
+    inline-size: calc(var(--diameter) * 2 + var(--spacing) * 2); /* width */
+    block-size: calc(var(--diameter) + var(--spacing) * 2); /* height */
+    border: none;
+    cursor: pointer;
+    background: var(--clr-toggle);
+    color: var(--clr-text);
+    position: relative;
+    border-radius: 100vh;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-around;
+    transition:
+        background-color 0.4s ease-in-out,
+        color 0.4s ease-in-out;
+}
+
+.theme-switch[aria-pressed='true'] {
+    --is-active: 1;
+}
+
+.theme-switch::before {
+    --offset: calc(100% - var(--diameter) - var(--spacing) * 2);
+    content: '';
+    position: absolute;
+    inset-inline-start: calc(var(--spacing) + var(--offset) * var(--is-active, 0)); /* left */
+    inset-block-start: var(--spacing); /* top */
+    border-radius: 100vh;
+    inline-size: var(--diameter); /* width */
+    block-size: var(--diameter); /* height */
+    background: #ffffff;
+    transition: inset-inline-start 0.4s ease-in-out; /* left */
+}
+
+.no-js .theme-switch {
+    display: none;
+}
+
+.theme-switch:focus {
+    outline: 2px solid currentColor;
+}
+
+.theme-switch:focus:not(:focus-visible) {
+    outline: 0;
+}
+
+@media (prefers-reduced-motion) {
+    .theme-switch {
+        transition-duration: 0.01s;
+    }
+
+    .theme-switch::before {
+        transition-duration: 0.01s;
+    }
+}
+
+html[data-theme="dark"]{
+    background: #363636 !important;
+    color: #fff !important;
+}
+html[data-theme="dark"] .t-bold{
+    background-color: red !important;
+}
+
+html[data-theme="dark"] .wrap .top{
+    background: #767676 !important;
+}
+
+html[data-theme="dark"] .wrap > .top > .container > .right > .title{
+    color: #efefef !important;
+}
+
+html[data-theme="dark"] div > div.row > div.right > div > div.text > ul > li > span{
+    color: #e8e8e8 !important;
+}
+
+html[data-theme="dark"] .wrap > .main > .container > .group.indv-project .title i,
+html[data-theme="dark"] .b-project .info .company,
+html[data-theme="dark"] .b-project .info .date span,
+html[data-theme="dark"] .b-project .info .b-name .sub {
+    color: #e8e8e8 !important;
 }
