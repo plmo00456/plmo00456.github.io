@@ -12,29 +12,41 @@ window.onload = function(){
         speed: 400,
         spaceBetween: 100,
     })
-    for(let i = 0; i<swiper.length; i++){
-        swiper[i].on('click', () => {
-            currentSwiper = i;
-        })
-        swiper[i].on('slideChange', (e) =>  {
-            currentSwiper = i;
-            const img = e.slides[e.activeIndex].querySelector("img").src;
-            if(img){
-                modalImage.src = img;
-            }
-        });
-    }
-
 
     const modal = document.getElementById("imageModal");
     const modalImage = document.getElementById("modalImage");
     const closeButton = document.querySelector(".close");
-
     const slideImages = document.querySelectorAll(".swiper-slide img");
+    const leftBtn = document.querySelector("#modal-left-btn");
+    const rightBtn = document.querySelector("#modal-right-btn");
+
+    for(let i = 0; i<swiper.length; i++){
+        swiper[i].on('click', (e) => {
+            currentSwiper = i;
+        })
+        swiper[i].on('slideChange', (e) =>  {
+            currentSwiper = i;
+            const img = e.slides[e.activeIndex].querySelector("img");
+            if(img){
+                modalImage.src = img.src;
+                const rect = modalImage.getBoundingClientRect();
+                leftBtn.style.top = ( rect.bottom / 2 ) + "px";
+                leftBtn.style.left = rect.left - 55 + "px";
+                rightBtn.style.top = ( rect.bottom / 2 ) + "px";
+                rightBtn.style.right = rect.left - 55 + "px";
+            }
+        });
+    }
+
     slideImages.forEach((image) => {
         image.addEventListener("click", (event) => {
             modal.classList.add("open");
             modalImage.src = event.target.src;
+            const rect = modalImage.getBoundingClientRect();
+            leftBtn.style.top = ( rect.bottom / 2 ) + "px";
+            leftBtn.style.left = rect.left - 55 + "px";
+            rightBtn.style.top = ( rect.bottom / 2 ) + "px";
+            rightBtn.style.right = rect.left - 55 + "px";
         });
     });
 
@@ -58,6 +70,14 @@ window.onload = function(){
                 swiper[currentSwiper].slideNext();
             }
         }
+    });
+
+    leftBtn.addEventListener("click", () => {
+        swiper[currentSwiper].slidePrev();
+    });
+
+    rightBtn.addEventListener("click", () => {
+        swiper[currentSwiper].slideNext();
     })
 
 

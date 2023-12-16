@@ -646,6 +646,18 @@ background: #8c8c8c;
     opacity: 1;
 }
 
+.modal .arrow-btn{
+    z-index: 1000;
+    position: absolute;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #007AFF;
+    padding: 5px 10px;
+}
+
+.modal .arrow-btn:hover{
+    color: #0099ff;
+}
 
 .close {
     position: absolute;
