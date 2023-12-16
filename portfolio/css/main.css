@@ -1150,7 +1150,7 @@ html[data-theme='dark'] {
     }
 }
 
-html[data-theme="dark"]{
+html[data-theme="dark"] body{
     background: #363636 !important;
     color: #fff !important;
 }

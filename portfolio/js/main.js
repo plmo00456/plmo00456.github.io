@@ -15,11 +15,6 @@ window.onload = function(){
     btn.addEventListener( 'click', onToggleTheme, false );
 
 
-    // DEMO
-    const toggle = document.querySelector( `.writing-toggle` );
-    if ( ! toggle ) return;
-    toggle.addEventListener('click', () => document.body.classList.toggle('vertical'));
-
     let currentSwiper = 0;
     const swiper = new Swiper('.indv-project .images', {
         loop: true,
