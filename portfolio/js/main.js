@@ -1,5 +1,6 @@
 window.onload = function(){
     let theme = 'light';
+    let mark = true;
 
     const onToggleTheme = ( { currentTarget } ) => {
         const newTheme = theme === 'light' ? 'dark' : 'light';
@@ -9,10 +10,21 @@ window.onload = function(){
         currentTarget.setAttribute( 'aria-pressed', newTheme === 'dark' );
     };
 
-    // Get switch button and add click event
-    const btn = document.querySelector( `.theme-switch` );
-    if ( ! btn ) return;
-    btn.addEventListener( 'click', onToggleTheme, false );
+    const themeBtn = document.querySelector( `.theme-switch.dark-mode` );
+    if ( ! themeBtn ) return;
+    themeBtn.addEventListener( 'click', onToggleTheme, false );
+
+    const onToggleMark = ( { currentTarget } ) => {
+        const newMark = !mark;
+        mark = newMark;
+
+        document.documentElement.setAttribute( 'data-mark', newMark + '' );
+        currentTarget.setAttribute( 'aria-pressed', !newMark);
+    };
+
+    const markBtn = document.querySelector( `.theme-switch.mark` );
+    if ( ! markBtn ) return;
+    markBtn.addEventListener( 'click', onToggleMark, false );
 
 
     let currentSwiper = 0;

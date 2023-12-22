@@ -207,7 +207,7 @@ body{
     color: #898989;
 }
 
-.wrap > .main > .container > .group > .cont-box .cont .text .t-bold {
+.t-bold {
     background-color: #feffad;
     font-weight: bold;
 }
@@ -437,7 +437,7 @@ background: #8c8c8c;
 .wrap > .main > .container > .group > .cont-box .cont .item i.dot {
     font-size: .5rem;
     margin-right: 5px;
-    color: #686868;
+    color: #66a4f3;
 }
 
 
@@ -1083,12 +1083,32 @@ html[data-theme="light"] .timeline .date#four .title img:not(.dark){
     --clr-background: #efefef;
     --clr-text: #333333;
     --clr-toggle: #e9c46a;
+
+    --clr-background-mark: #efefef;
+    --clr-text-mark: #333333;
+    --clr-toggle-mark: #e9c46a;
 }
 
 html[data-theme='dark'] {
     --clr-background: #333333;
     --clr-text: #efefef;
     --clr-toggle: #345b6f;
+}
+
+html[data-mark='false'] {
+    --clr-background-mark: #333333;
+    --clr-text-mark: #efefef;
+    --clr-toggle-mark: #345b6f;
+}
+
+.theme-switch.dark-mode{
+    background: var(--clr-toggle);
+    color: var(--clr-text);
+}
+
+.theme-switch.mark{
+    background: var(--clr-toggle-mark);
+    color: var(--clr-text-mark);
 }
 
 .theme-switch {
@@ -1099,8 +1119,6 @@ html[data-theme='dark'] {
     block-size: calc(var(--diameter) + var(--spacing) * 2); /* height */
     border: none;
     cursor: pointer;
-    background: var(--clr-toggle);
-    color: var(--clr-text);
     position: relative;
     border-radius: 100vh;
     display: inline-flex;
@@ -1175,4 +1193,13 @@ html[data-theme="dark"] .b-project .info .company,
 html[data-theme="dark"] .b-project .info .date span,
 html[data-theme="dark"] .b-project .info .b-name .sub {
     color: #e8e8e8 !important;
+}
+
+html[data-theme="dark"] .summary-title > span {
+    background: #363636 !important;
+}
+
+html[data-mark="false"] .t-bold{
+    background: transparent !important;
+    font-weight: unset !important;
 }
