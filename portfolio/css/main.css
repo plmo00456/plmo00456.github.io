@@ -211,6 +211,9 @@ body{
     background-color: #feffad;
     font-weight: bold;
 }
+p.t-bold{
+    display: inline-block;
+}
 
 .wrap > .main > .container > .group > .cont-box .cont .text .t-bold-tmp {
     font-weight: bold;
@@ -1173,7 +1176,7 @@ html[data-theme="dark"] body{
     color: #fff !important;
 }
 html[data-theme="dark"] .t-bold{
-    background-color: red !important;
+    background-color: #ff5151 !important;
 }
 
 html[data-theme="dark"] .wrap .top{
@@ -1202,4 +1205,16 @@ html[data-theme="dark"] .summary-title > span {
 html[data-mark="false"] .t-bold{
     background: transparent !important;
     font-weight: unset !important;
+}
+
+.hl {
+    padding: 2px;
+    border: 1px solid #8c8c8c;
+    background: #e8e8e8;
+    border-radius: 3px;
+}
+
+html[data-theme="dark"] .hl{
+    color: #000;
+    background: #cecece;
 }
