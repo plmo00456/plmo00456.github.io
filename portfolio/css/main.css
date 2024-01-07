@@ -165,8 +165,13 @@ body{
     margin-right: 10px;
 }
 
-.wrap > .main > .container > .group{
+.wrap > .main > .container > .group:not(#menu5, #menu5-2, #menu5-3){
     padding: 80px 0 40px 0;
+    width: 100%;
+}
+
+.wrap > .main > .container > .group#menu5 {
+    padding-top: 80px;
     width: 100%;
 }
 
@@ -219,8 +224,17 @@ p.t-bold{
     font-weight: bold;
 }
 
-.wrap > .main > .container > .group > .cont-box .cont .list{
+.wrap > .main > .container > .group:not(#menu5, #menu5-2, #menu5-3) > .cont-box .cont .list{
     border-top: 1px solid #cfcfcf;
+    border-bottom: 1px solid #cfcfcf;
+}
+
+.wrap > .main > .container > .group#menu5 > .cont-box .cont .list{
+    border-top: 1px solid #cfcfcf;
+    border-bottom: 1px solid #cfcfcf;
+}
+.wrap > .main > .container > .group#menu5-2 > .cont-box .cont .list,
+.wrap > .main > .container > .group#menu5-3 > .cont-box .cont .list{
     border-bottom: 1px solid #cfcfcf;
 }
 
@@ -1217,4 +1231,28 @@ html[data-mark="false"] .t-bold{
 html[data-theme="dark"] .hl{
     color: #000;
     background: #cecece;
+}
+
+.zoomBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.zoomBtn .zoomInOut {
+    font-size: 1.5rem;
+    line-height: 1rem;
+    padding: 3px 5px;
+    background-color: #fff;
+    outline: none;
+    border: 1px solid black;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.zoomBtn #currentPer {
+    font-size: .8rem;
+    margin: 0 2px;
+    cursor: pointer;
 }

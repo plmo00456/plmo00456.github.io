@@ -157,6 +157,79 @@ window.onload = function(){
     };
     xhr2.open('GET', 'file/programmers_status.json');
     xhr2.send();
+
+    // 줌 기능
+    const zoomValue = document.querySelector('#currentPer');
+    const zoomIn = document.querySelector('#zoomIn');
+    const zoomOut = document.querySelector('#zoomOut');
+    let nowZoom = 100;
+
+    function zooms() {
+        zoomValue.textContent = nowZoom + '%';
+        document.querySelector('.wrap').style.zoom = nowZoom + "%";
+        if(nowZoom == 60) {
+            return;
+        }
+        if(nowZoom == 200) {
+            return;
+        }
+    }
+
+    zoomValue.addEventListener('click', () => {
+        nowZoom = 100;
+        zooms();
+    });
+
+    zoomIn.addEventListener('click', () => {
+        nowZoom = nowZoom + 20;
+
+        // 화면크기 최대 확대율 200%
+        if(nowZoom >= 200){
+            nowZoom = 200;
+        }
+        zooms();
+    });
+
+    zoomOut.addEventListener('click', () => {
+        nowZoom = nowZoom - 20;
+
+        // 화면크기 최대 축소율 70%
+        if(nowZoom <= 60){
+            nowZoom = 60;
+        }
+        zooms();
+    });
+
+
+    // 현재 스크롤 위치 감지
+    let currentScrollEmenet = null;
+    var findCenterElement = function() {
+        var center = $(window).scrollTop() + ($(window).height() / 2);
+        var result = null;
+
+        $('.group').each(function() {
+            var top = $(this).offset().top;
+            var bottom = top + $(this).outerHeight();
+
+            if (top <= center && center <= bottom) {
+                result = this;
+                return false; // break the loop
+            }
+        });
+        if(currentScrollEmenet === result) return null;
+        else currentScrollEmenet = result;
+        return result;
+    }
+
+    $(window).on('scroll', function() {
+        const centerElement = findCenterElement();
+        if (centerElement) {
+            const id = centerElement.id.split('-')[0];
+            $('.pageMenu').removeClass('selected');
+            $(`#${id}Btn`).addClass('selected');
+        }
+    });
+
 }
 
 const pdfMake = () => {
@@ -176,7 +249,7 @@ const pdfMake = () => {
     showLoadingOverlay();
 
     // 캡쳐할 요소 그룹
-    const groups = [['.top', '#menu1', '#menu2', '#menu3'], ['#menu4'], ['#menu5', '#menu6', '#menu7', '#menu8', '#menu9']];
+    const groups = [['.top', '#menu1', '#menu2', '#menu3'], ['#menu4'], ['#menu5'], ['#menu5-2'], ['#menu5-3'], ['#menu6', '#menu7', '#menu8', '#menu9']];
 
     const captureGroupAndAddToPdf = (group) => {
         // 모든 요소를 일단 숨김
@@ -188,7 +261,7 @@ const pdfMake = () => {
             $(selector).show();
         });
 
-        return html2canvas($('body')[0]).then(canvas => {
+        return html2canvas($('.wrap')[0]).then(canvas => {
             let imgData = canvas.toDataURL('image/jpeg', 1);
             let imgHeight = canvas.height * imgWidth / canvas.width;
             let heightLeft = imgHeight;
@@ -238,22 +311,29 @@ const pdfMake = () => {
         // 로딩 화면 숨기기
         hideLoadingOverlay();
     });
-
 }
-document.addEventListener("DOMContentLoaded", function () {
-    window.addEventListener("scroll", function () {
-        for (var i = 1; i <= document.querySelectorAll(".group").length; i++) {
-            var menuItem = document.querySelector("#menu" + i);
-            var button = document.querySelector("#menu" + i + "Btn");
-            var rect = menuItem.getBoundingClientRect();
-            if (rect.top < window.innerHeight / 2 && rect.bottom > window.innerHeight / 2) {
-                button.classList.add("selected");
-            } else {
-                button.classList.remove("selected");
-            }
-        }
-    });
-});
+// document.addEventListener("DOMContentLoaded", function () {
+//     const groups = document.querySelectorAll(".group");
+//     const observer = new IntersectionObserver(entries => {
+//         entries.forEach(entry => {
+//             const id = entry.target.getAttribute('id').split('-')[0];
+//             if (entry.intersectionRatio > 0) {
+//                 console.log(entry.intersectionRect);
+//                 document.querySelectorAll('.pageMenu').forEach(page => {
+//                     page.classList.remove('selected');
+//                 });
+//                 console.log('현재 보이는 요소의 ID:', entry.target.getAttribute('id'));
+//                 document.querySelector(`#${id}Btn`).classList.add("selected");
+//             }
+//         });
+//     });
+//
+//     groups.forEach(group => {
+//         observer.observe(group);
+//     });
+// });
+
+
 
 
 function scrollToElem(elemId) {
